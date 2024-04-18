@@ -24,7 +24,7 @@ export default function Career() {
           link: 'https://apps.apple.com/kr/app/%EC%A7%A0-jjaann-%EC%8A%A4%ED%83%80%EC%99%80-%ED%8C%AC-%ED%8C%AC%EA%B3%BC-%ED%8C%AC%EC%9D%B4-%ED%95%A8%EA%BB%98/id1617588410',
         },
         {
-          title: 'https://jjaann.com/',
+          title: 'https://jjaann.com',
           link: 'https://jjaann.com/',
         },
       ],
@@ -32,7 +32,7 @@ export default function Career() {
   ];
 
   return (
-    <div className="ring-border text-text mx-4 flex flex-col gap-4 rounded-xl p-4 outline-none ring">
+    <div className="mx-4 flex flex-col gap-4 rounded-xl p-4 text-text outline-none ring ring-border">
       <div className="flex gap-4">
         <span className="text-3xl font-semibold text-gray-950">Career</span>
       </div>
@@ -43,7 +43,7 @@ export default function Career() {
       />
       <Period duration="2022.01 ~ 2023.05 (1년 5개월)" />
       <SummaryCard summaries={summaries} />
-      <div className="text-text pl-4">
+      <div className="pl-4 text-text">
         <ul className="list-inside list-disc [&_ul]:pl-8">
           <li>프로젝트 기획 참여 (API, DB 설계 및 UI 의견 반영)</li>
           <li>

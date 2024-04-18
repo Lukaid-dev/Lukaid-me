@@ -12,9 +12,8 @@ export default function Summary({ summary }: { summary: summary }) {
           </div>
           <div className="flex shrink-0 gap-2">
             {summary.urls?.map((url, index) => (
-              <>
+              <div key={url.title} className="flex shrink-0 gap-2">
                 <a
-                  key={url.title}
                   href={url.link}
                   target="_blank"
                   rel="noreferrer"
@@ -22,7 +21,7 @@ export default function Summary({ summary }: { summary: summary }) {
                   {url.title}
                 </a>
                 {index !== summary.urls!.length - 1 && <div> / </div>}
-              </>
+              </div>
             ))}
           </div>
         </div>

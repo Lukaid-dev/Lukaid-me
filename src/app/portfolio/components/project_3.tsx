@@ -34,16 +34,12 @@ export default function Project_3() {
           title: '앱스토어',
           link: 'https://apps.apple.com/kr/app/4-hours/id6449733324',
         },
-        {
-          title: 'https://jjaann.com/',
-          link: 'https://jjaann.com/',
-        },
       ],
     },
   ];
 
   return (
-    <div className="ring-border text-text mx-4 flex flex-col gap-4 rounded-xl p-4 outline-none ring">
+    <div className="mx-4 flex flex-col gap-4 rounded-xl p-4 text-text outline-none ring ring-border">
       <div className="flex gap-4">
         <span className="text-3xl font-semibold text-gray-950">Project</span>
       </div>
@@ -54,7 +50,7 @@ export default function Project_3() {
       />
       <Period duration="2023.02 ~ 2023.08 (7개월)" />
       <SummaryCard summaries={summaries} />
-      <div className="text-text pl-4">
+      <div className="pl-4 text-text">
         <ul className="list-inside list-disc [&_ul]:pl-8">
           <li>초기 기능 정의 및 기획</li>
           <li>
