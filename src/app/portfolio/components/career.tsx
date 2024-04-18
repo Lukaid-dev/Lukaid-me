@@ -1,5 +1,4 @@
 import Divider from '@/components/divider';
-import CareerCard from './careerCard';
 
 export default function Career() {
   return (

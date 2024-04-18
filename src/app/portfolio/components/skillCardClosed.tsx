@@ -2,7 +2,7 @@ import SkillBadge from './skillBadge';
 
 export default function SkillCardClosed({ isOpen }: { isOpen: boolean }) {
   return (
-    <div className={`${isOpen ? 'hidden' : 'flex'} mt-4 flex-col gap-4`}>
+    <div className={`${isOpen ? 'hidden' : 'flex'} flex-col gap-4`}>
       <div className="flex gap-4">
         <SkillBadge isOpen={false} skill="react" />
         <SkillBadge isOpen={false} skill="nextjs" />

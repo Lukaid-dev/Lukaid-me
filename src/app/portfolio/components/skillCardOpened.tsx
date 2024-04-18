@@ -2,7 +2,7 @@ import SkillBadge from './skillBadge';
 
 export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
   return (
-    <div className={`${isOpen ? 'flex' : 'hidden'} mt-4 flex-col gap-4`}>
+    <div className={`${isOpen ? 'flex' : 'hidden'} flex-col gap-4`}>
       <div className="flex flex-col gap-2">
         <div className="flex gap-1 sm:gap-2 md:gap-4">
           <SkillBadge isOpen={isOpen} skill="react" />

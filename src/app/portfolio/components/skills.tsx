@@ -23,25 +23,25 @@ export default function Skills() {
 
   return (
     <div className="ring-border text-text mx-4 flex flex-col rounded-xl p-4 outline-none ring">
-      <div className="flex gap-4 pb-2">
+      <div className="mb-4 flex gap-4">
         <span className="text-3xl font-semibold text-gray-950">Skills</span>
         <div onClick={onClick} className="flex items-end">
           <span>{isOpen ? '닫기' : '자세히보기'}</span>
         </div>
       </div>
       <Divider />
-      <>
-        <motion.div
-          variants={containerVariants}
-          animate={isOpen ? 'visible' : 'hidden'}>
-          <SkillCardOpened isOpen={isOpen} />
-        </motion.div>
-        <motion.div
-          variants={containerVariants}
-          animate={isOpen ? 'hidden' : 'visible'}>
-          <SkillCardClosed isOpen={isOpen} />
-        </motion.div>
-      </>
+      {/* 여기 hidden되는애가 gap-4 잡아먹는듯? */}
+      <motion.div
+        className="mt-4"
+        variants={containerVariants}
+        animate={isOpen ? 'hidden' : 'visible'}>
+        <SkillCardClosed isOpen={isOpen} />
+      </motion.div>
+      <motion.div
+        variants={containerVariants}
+        animate={isOpen ? 'visible' : 'hidden'}>
+        <SkillCardOpened isOpen={isOpen} />
+      </motion.div>
     </div>
   );
 }
