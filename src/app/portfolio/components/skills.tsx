@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import SkillCardOpened from './skillCardOpened';
 import SkillCardClosed from './skillCardClosed';
+import Divider from '@/components/divider';
 
 export default function Skills() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,13 +23,13 @@ export default function Skills() {
 
   return (
     <div className="ring-border text-text mx-4 flex flex-col rounded-xl p-4 outline-none ring">
-      <div className="flex gap-4">
+      <div className="flex gap-4 pb-2">
         <span className="text-3xl font-semibold text-gray-950">Skills</span>
         <div onClick={onClick} className="flex items-end">
           <span>{isOpen ? '닫기' : '자세히보기'}</span>
         </div>
       </div>
-
+      <Divider />
       <>
         <motion.div
           variants={containerVariants}
