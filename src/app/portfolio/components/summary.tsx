@@ -5,12 +5,12 @@ export default function Summary({ summary }: { summary: summary }) {
   return (
     <div className="text-text">
       {summary.isUrl ? (
-        <div className="flex items-center gap-2">
-          <span className="font-semibold">{summary.key}</span>
-          <div className="relative size-4">
+        <div className="flex items-center gap-2 overflow-auto text-nowrap">
+          <span className="shrink-0 font-semibold">{summary.key}</span>
+          <div className="relative size-4 shrink-0">
             <Image fill src="/vertical-divider.svg" alt="vertical-divider" />
           </div>
-          <div className="flex gap-2">
+          <div className="flex shrink-0 gap-2">
             {summary.urls?.map((url, index) => (
               <>
                 <a
@@ -27,12 +27,12 @@ export default function Summary({ summary }: { summary: summary }) {
           </div>
         </div>
       ) : (
-        <div className="flex items-center gap-2">
-          <span className="font-semibold">{summary.key}</span>
-          <div className="relative size-4">
+        <div className="flex items-center gap-2 overflow-auto text-nowrap">
+          <span className="shrink-0 font-semibold">{summary.key}</span>
+          <div className="relative size-4 shrink-0">
             <Image fill src="/vertical-divider.svg" alt="vertical-divider" />
           </div>
-          <div className="flex gap-2">{summary.value}</div>
+          <span className="flex gap-2">{summary.value}</span>
         </div>
       )}
     </div>
