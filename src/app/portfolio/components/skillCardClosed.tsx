@@ -12,18 +12,18 @@ export default function SkillCardClosed({ isOpen }: { isOpen: boolean }) {
       </div>
 
       <div className="flex gap-4">
-        <SkillBadge isOpen={false} skill="dart" />
         <SkillBadge isOpen={false} skill="flutter" />
+        <SkillBadge isOpen={false} skill="dart" />
       </div>
 
       <div className="flex gap-4">
-        <SkillBadge isOpen={false} skill="python" />
         <SkillBadge isOpen={false} skill="django" />
+        <SkillBadge isOpen={false} skill="python" />
       </div>
 
       <div className="flex gap-4">
-        <SkillBadge isOpen={false} skill="nodejs" />
         <SkillBadge isOpen={false} skill="express" />
+        <SkillBadge isOpen={false} skill="nodejs" />
       </div>
 
       <div className="flex gap-4">

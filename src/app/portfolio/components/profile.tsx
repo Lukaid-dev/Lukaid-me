@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function ProfileCard() {
+export default function Profile() {
   return (
     <div className="ring-second m-4 flex flex-col gap-4 rounded-xl p-4 outline-none ring sm:flex-row">
       <div className="relative h-60 w-40 overflow-hidden rounded-xl">

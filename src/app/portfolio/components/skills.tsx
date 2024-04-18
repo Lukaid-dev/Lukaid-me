@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import SkillCardOpened from './skillCardOpened';
 import SkillCardClosed from './skillCardClosed';
 
-export default function SkillCard() {
+export default function Skills() {
   const [isOpen, setIsOpen] = useState(false);
   const onClick = () => setIsOpen(!isOpen);
 

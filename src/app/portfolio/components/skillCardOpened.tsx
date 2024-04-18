@@ -38,8 +38,8 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
 
       <div className="flex flex-col gap-2">
         <div className="flex gap-1 sm:gap-2 md:gap-4">
-          <SkillBadge isOpen={isOpen} skill="dart" />
           <SkillBadge isOpen={isOpen} skill="flutter" />
+          <SkillBadge isOpen={isOpen} skill="dart" />
         </div>
         <div className="flex pl-6">
           차힝기싣언옹횿을 홈오팊 트긴누도에, 제아둰처럼 준보디며어 에푸넌노다
@@ -54,8 +54,8 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
 
       <div className="flex flex-col gap-2">
         <div className="flex gap-1 sm:gap-2 md:gap-4">
-          <SkillBadge isOpen={isOpen} skill="python" />
           <SkillBadge isOpen={isOpen} skill="django" />
+          <SkillBadge isOpen={isOpen} skill="python" />
         </div>
         <div className="flex pl-6">
           차힝기싣언옹횿을 홈오팊 트긴누도에, 제아둰처럼 준보디며어 에푸넌노다
@@ -70,8 +70,8 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
 
       <div className="flex flex-col gap-2">
         <div className="flex gap-1 sm:gap-2 md:gap-4">
-          <SkillBadge isOpen={isOpen} skill="nodejs" />
           <SkillBadge isOpen={isOpen} skill="express" />
+          <SkillBadge isOpen={isOpen} skill="nodejs" />
         </div>
         <div className="flex pl-6">
           차힝기싣언옹횿을 홈오팊 트긴누도에, 제아둰처럼 준보디며어 에푸넌노다
