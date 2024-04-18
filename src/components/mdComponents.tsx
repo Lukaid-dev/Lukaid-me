@@ -4,7 +4,7 @@ import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Image, { ImageProps } from 'next/image';
 import { BiClipboard } from 'react-icons/bi';
 import { ReactElement } from 'react';
-import { getCurrentLanguage, getIcon } from '@/utils/codeParser';
+import { getCurrentLanguage, getIcon } from '@/utils/mdCodeLangName';
 
 type Components = Partial<{
   [TagName in keyof JSX.IntrinsicElements]:  // Class component:

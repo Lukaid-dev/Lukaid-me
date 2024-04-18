@@ -1,4 +1,4 @@
-import { summary } from '@/summary';
+import { summary } from '@/app/types/summary';
 import Image from 'next/image';
 
 export default function Summary({ summary }: { summary: summary }) {

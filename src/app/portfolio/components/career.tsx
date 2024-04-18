@@ -2,7 +2,7 @@ import Divider from '@/components/divider';
 import Naming from './naming';
 import Period from './period';
 import SummaryCard from './summaryCard';
-import { summary } from '@/summary';
+import { summary } from '@/app/types/summary';
 
 export default function Career() {
   const summaries: summary[] = [

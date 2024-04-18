@@ -2,7 +2,7 @@ import Divider from '@/components/divider';
 import Naming from './naming';
 import Period from './period';
 import SummaryCard from './summaryCard';
-import { summary } from '@/summary';
+import { summary } from '@/app/types/summary';
 
 export default function Project_1() {
   const summaries: summary[] = [
@@ -35,7 +35,7 @@ export default function Project_1() {
   ];
 
   return (
-    <div className="ring-border text-text mx-4 flex flex-col gap-4 rounded-xl p-4 outline-none ring">
+    <div className="mx-4 flex flex-col gap-4 rounded-xl p-4 text-text outline-none ring ring-border">
       <div className="flex gap-4">
         <span className="text-3xl font-semibold text-gray-950">Project</span>
       </div>
@@ -46,7 +46,7 @@ export default function Project_1() {
       />
       <Period duration="2023.12.17 ~ 2023.12.24 (일주일)" />
       <SummaryCard summaries={summaries} />
-      <div className="text-text pl-4">
+      <div className="pl-4 text-text">
         <ul className="list-inside list-disc [&_ul]:pl-8">
           <li>
             초기 기능 정의 및 화면 기획 (넓은 연령대를 커버하기 위해 직관적인
