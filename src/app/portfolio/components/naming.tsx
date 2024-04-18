@@ -6,10 +6,11 @@ export default function Naming({
   description: string;
 }) {
   return (
-    <div className="ring-border text-text mx-4 flex flex-col rounded-xl p-4 outline-none ring">
-      <div className="flex gap-4 pb-2">
-        <span className="text-3xl font-semibold text-gray-950">Naming</span>
+    <div className="flex items-center gap-4">
+      <div className="bg-second/15 shrink-0 px-2 py-1">
+        <span className="text-primary text-lg font-bold">{name}</span>
       </div>
+      <p className="text-text">{description}</p>
     </div>
   );
 }
