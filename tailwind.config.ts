@@ -13,6 +13,13 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        primary: '#2E6FF2',
+        second: '#5C8EF2',
+        third: '#F3F5FA',
+        border: '#D9DBE0',
+        text: '#47494D',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

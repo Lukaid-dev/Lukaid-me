@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function ProfileCard() {
   return (
-    <div className="flex w-full flex-col gap-4 bg-slate-100 px-4 sm:flex-row">
+    <div className="ring-second m-4 flex flex-col gap-4 rounded-xl p-4 outline-none ring sm:flex-row">
       <div className="relative h-60 w-40 overflow-hidden rounded-xl">
         <Image
           fill
@@ -13,18 +13,24 @@ export default function ProfileCard() {
       </div>
       <div className="flex flex-col justify-center gap-2">
         <div className="flex flex-col gap-1">
-          <h1 className="text-3xl font-bold text-gray-900">이성우 / Lukaid</h1>
-          <h2 className="text-xl font-semibold text-gray-900">
+          <div className="flex items-end gap-2">
+            <span className="text-primary text-3xl font-bold">이성우</span>
+            <span className="text-primary text-2xl font-semibold">/</span>
+            <span className="text-primary text-1xl font-semibold">Lukaid</span>
+          </div>
+          <h2 className="text-primary text-xl font-semibold">
             full stack web developer
           </h2>
         </div>
-        <div>
-          <span className="font-bold">제너럴리스트(Generalist)</span>를
-          추구하며,
-          <span className="font-bold">함께 가치</span>를 만들어 나가는 개발자
-          이성우입니다.
+        <div className="text-second">
+          <span className="text-primary font-bold">
+            제너럴리스트(Generalist)
+          </span>
+          를 추구하며,
+          <span className="text-primary font-bold">함께 가치</span>를 만들어
+          나가는 개발자 이성우입니다.
         </div>
-        <div>
+        <div className="text-text">
           <div className="flex gap-2">
             <Image
               src="/icon-calendar.svg"

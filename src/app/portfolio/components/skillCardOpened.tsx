@@ -4,7 +4,7 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
   return (
     <div className={`${isOpen ? 'flex' : 'hidden'} mt-4 flex-col gap-4`}>
       <div className="flex flex-col gap-2">
-        <div className="flex gap-2">
+        <div className="flex gap-1 sm:gap-2 md:gap-4">
           <SkillBadge isOpen={isOpen} skill="react" />
           <SkillBadge isOpen={isOpen} skill="nextjs" />
           <SkillBadge isOpen={isOpen} skill="tailwindcss" />
@@ -21,7 +21,7 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
       </div>
 
       <div className="flex flex-col gap-2">
-        <div className="flex gap-2">
+        <div className="flex gap-1 sm:gap-2 md:gap-4">
           <SkillBadge isOpen={isOpen} skill="javascript" />
           <SkillBadge isOpen={isOpen} skill="typescript" />
         </div>
@@ -37,7 +37,7 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
       </div>
 
       <div className="flex flex-col gap-2">
-        <div className="flex gap-2">
+        <div className="flex gap-1 sm:gap-2 md:gap-4">
           <SkillBadge isOpen={isOpen} skill="dart" />
           <SkillBadge isOpen={isOpen} skill="flutter" />
         </div>
@@ -53,7 +53,7 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
       </div>
 
       <div className="flex flex-col gap-2">
-        <div className="flex gap-2">
+        <div className="flex gap-1 sm:gap-2 md:gap-4">
           <SkillBadge isOpen={isOpen} skill="python" />
           <SkillBadge isOpen={isOpen} skill="django" />
         </div>
@@ -69,7 +69,7 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
       </div>
 
       <div className="flex flex-col gap-2">
-        <div className="flex gap-2">
+        <div className="flex gap-1 sm:gap-2 md:gap-4">
           <SkillBadge isOpen={isOpen} skill="nodejs" />
           <SkillBadge isOpen={isOpen} skill="express" />
         </div>
@@ -85,7 +85,7 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
       </div>
 
       <div className="flex flex-col gap-2">
-        <div className="flex gap-2">
+        <div className="flex gap-1 sm:gap-2 md:gap-4">
           <SkillBadge isOpen={isOpen} skill="ubuntu" />
           <SkillBadge isOpen={isOpen} skill="docker" />
         </div>
