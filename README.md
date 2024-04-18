@@ -19,6 +19,8 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
   - gray-matter, typography, prose정리하기
 - 포트폴리오 개발
   - tailwindcss 세팅
+  - 경력 / 플젝 서머리카드 반응형 더 좋은 방법 없는지 고려
+  - 경력 / 플젝도 서버에서 가져 올 수 있겠는데?
 - 서버개발 시작
 - 프론트 배포 고민
   - vercel? or local

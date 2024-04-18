@@ -3,7 +3,7 @@ export default function Naming({
   description,
 }: {
   name: string;
-  description: string;
+  description?: string;
 }) {
   return (
     <div className="flex items-center gap-4">

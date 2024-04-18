@@ -1,7 +1,10 @@
 {
   "cSpell.words": [
+    "Baekjoon",
+    "baekjoonrooms",
     "blockqute",
     "clsx",
+    "Dockerizing",
     "Lukaid",
     "Matplotlib",
     "nextjs",
@@ -9,7 +12,9 @@
     "pgsql",
     "Seong",
     "tailwindcss",
+    "tanstack",
     "velcdn",
-    "velog"
+    "velog",
+    "Zustand"
   ]
 }
