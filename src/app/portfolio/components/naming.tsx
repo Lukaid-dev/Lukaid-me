@@ -6,9 +6,9 @@ export default function Naming({
   description?: string;
 }) {
   return (
-    <div className="flex items-center gap-4">
-      <div className="bg-second/15 shrink-0 px-2 py-1">
-        <span className="text-primary text-lg font-bold">{name}</span>
+    <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
+      <div className="mr-auto bg-second/15 px-2 py-1 md:mr-0 md:shrink-0">
+        <span className="text-lg font-bold text-primary">{name}</span>
       </div>
       <p className="text-text">{description}</p>
     </div>
