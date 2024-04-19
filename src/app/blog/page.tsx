@@ -8,9 +8,9 @@ export default async function RemoteMdxPage() {
   const markdown = fs.readFileSync('src/markdown_test.txt', 'utf-8');
   const { data, content } = matter(markdown);
   return (
-    <div className="flex flex-col items-start gap-2 bg-slate-300">
+    <div className="mx-auto bg-slate-300 p-2">
       <Markdown
-        className="prose"
+        className="prose mx-auto max-w-screen-xl bg-pink-100 text-xl text-text"
         remarkPlugins={[remarkGfm]}
         components={mdComponents}>
         {content
