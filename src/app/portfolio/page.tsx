@@ -5,6 +5,7 @@ import Project_1 from './components/project_1';
 import Project_2 from './components/project_2';
 import Project_3 from './components/project_3';
 import Research from './components/research';
+import Education from './components/education';
 import PersonalStatement from './components/personalStatement';
 
 export default function Portfolio() {
@@ -17,6 +18,7 @@ export default function Portfolio() {
       <Project_2 />
       <Project_3 />
       <Research />
+      <Education />
       <PersonalStatement />
     </div>
   );
