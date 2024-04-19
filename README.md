@@ -25,6 +25,9 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
 - 프론트 배포 고민
   - vercel? or local
   - lukaid.me domain 구매
+- 모바일 수정사항
+  - 코드 블럭 반응형
+  - 링크 새탭으로
 
 ### 참고자료
 
