@@ -19,7 +19,7 @@ export default function Profile() {
             <span className="text-1xl font-semibold text-primary">Lukaid</span>
           </div>
           <h2 className="text-xl font-semibold text-primary">
-            full stack web developer
+            Full Stack Web Developer
           </h2>
         </div>
         <div className="text-second">

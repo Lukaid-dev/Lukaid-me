@@ -9,7 +9,9 @@ tags:
 thumbnail: https://avatars.githubusercontent.com/u/97015501?v=4
 ---
 
-# Lukaid-me 포스팅을 위한 마크다운 작성 가이드
+# 현재 해당 페이지는 개발중에 있습니다.
+
+# Lukaid.me 포스팅을 위한 마크다운 작성 가이드
 
 안녕하세요. 개발자 이성우입니다. 해당 서비스에서 사용가능한 마크다운 문법을 설명드리겠습니다.
 

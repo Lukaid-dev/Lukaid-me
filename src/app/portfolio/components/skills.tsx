@@ -22,15 +22,16 @@ export default function Skills() {
   };
 
   return (
-    <div className="ring-border text-text mx-4 flex flex-col rounded-xl p-4 outline-none ring">
-      <div className="mb-4 flex gap-4">
+    <div className="mx-4 flex flex-col rounded-xl p-4 text-text outline-none ring ring-border">
+      <div className="mb-4 flex justify-between gap-4">
         <span className="text-3xl font-semibold text-gray-950">Skills</span>
-        <div onClick={onClick} className="flex items-end">
+        <div
+          onClick={onClick}
+          className="flex text-text/80 hover:cursor-pointer">
           <span>{isOpen ? '닫기' : '자세히보기'}</span>
         </div>
       </div>
       <Divider />
-      {/* 여기 hidden되는애가 gap-4 잡아먹는듯? */}
       <motion.div
         className="mt-4"
         variants={containerVariants}
