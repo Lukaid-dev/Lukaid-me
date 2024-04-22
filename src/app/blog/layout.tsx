@@ -3,5 +3,5 @@ export default function PostLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="mx-auto bg-slate-200">{children}</div>;
+  return <div className="mx-auto">{children}</div>;
 }

@@ -13,7 +13,10 @@ export function formatToTimeAgo(date: string): string {
 
   if (diffInMs >= weekInMs) {
     // If the date is more than a week ago, return the date in the format of 'YYYY-MM-DD'
-    return new Date(time).toLocaleDateString();
+    const year = new Date(time).getFullYear();
+    const month = new Date(time).getMonth() + 1;
+    const day = new Date(time).getDate();
+    return `${year}-${month}-${day}`;
   } else if (diffInMs >= dayInMs) {
     const diff = Math.round(diffInMs / dayInMs);
     return formatter.format(-diff, 'days');

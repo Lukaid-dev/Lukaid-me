@@ -6,8 +6,6 @@ import { getPostId } from '@/api/getPostId';
 
 export default async function PostPage({ params }: { params: { id: string } }) {
   const res = await getPostId(params.id);
-  console.log(res);
-
   const markdown = res.content;
   const { content } = matter(markdown);
   return (

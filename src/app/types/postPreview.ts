@@ -3,6 +3,6 @@ export interface PostPreviewType {
   title: string;
   thumbnail?: string;
   content_summary: string;
-  updated_at: string;
+  written_at: string;
   is_pinned: boolean;
 }
