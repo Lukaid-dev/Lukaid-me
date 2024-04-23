@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import NoImage from './\bnoImage';
+import NoImage from './noImage';
 
 export default function Thumbnail({ thumbnail }: { thumbnail?: string }) {
   return (

@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${inter.className} mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2`}>
+        className={`${inter.className} mx-auto shadow-xl md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2`}>
         <Header />
         {children}
         <Analytics />
