@@ -9,9 +9,9 @@ export default async function PostPage({ params }: { params: { id: string } }) {
   const markdown = res.content;
   const { content } = matter(markdown);
   return (
-    <div className="mx-auto bg-slate-300 p-2">
+    <article className="mx-auto p-2">
       <Markdown
-        className="prose mx-auto max-w-screen-xl bg-pink-100 text-xl text-text"
+        className="custom-prose mx-auto max-w-screen-xl"
         remarkPlugins={[remarkGfm]}
         components={mdComponents}>
         {content
@@ -20,6 +20,6 @@ export default async function PostPage({ params }: { params: { id: string } }) {
           .replace(/@\$_%!\^/gi, '**')
           .replace(/<\/?u>/gi, '*')}
       </Markdown>
-    </div>
+    </article>
   );
 }

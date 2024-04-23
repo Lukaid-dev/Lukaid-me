@@ -23,6 +23,7 @@ const markdownComponents: Components = {
   img: ({ node, ...props }) => (
     // eslint-disable-next-line jsx-a11y/alt-text
     <Image
+      className="rounded-xl p-2"
       layout="responsive"
       width={500}
       height={500}
@@ -34,10 +35,10 @@ const markdownComponents: Components = {
       props?.children as ReactElement
     )?.props?.className?.replace('language-', '');
     const Icon = getIcon(language!);
-    if (!language) return <pre className="mx-2" {...props} />;
+    if (!language) return <pre className="m-2" {...props} />;
     return (
-      <div className="mx-2 flex flex-col rounded-lg bg-[#282C34]">
-        <div className="flex items-center justify-between px-4 py-2">
+      <div className="bg-code-bg m-2 flex flex-col rounded-lg">
+        <div className=" flex items-center justify-between px-4 py-2">
           <div className="flex items-center gap-4 text-gray-400">
             <span className="text-lg">{Icon}</span>
             <span className="text-xs">{language}</span>
@@ -56,7 +57,7 @@ const markdownComponents: Components = {
     const currentLanguage = getCurrentLanguage(
       props.className?.replace('language-', ''),
     );
-    if (!currentLanguage) return <code {...props} />;
+    if (!currentLanguage) return <code className="text-white" {...props} />;
     return (
       <SyntaxHighlighter
         language={currentLanguage}
@@ -71,6 +72,13 @@ const markdownComponents: Components = {
       </SyntaxHighlighter>
     );
   },
+  // p: ({ node, ...props }) => {
+  //   console.log(props.children);
+  //   if (typeof props.children === 'object' && props.children?.props?.tagName === 'code') {
+  //     return <code className="bg-code-bg" {props.children.props.children} />;
+  //   }
+  //   return <p {...props} />;
+  // },
 };
 
 export default markdownComponents;

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ul ul {
+    list-style-type: revert;
+  }
+  ul li::marker {
+    content: '● ';
+  }
+  ul li li::marker {
+    content: '○ ';
+  }
+  ul li li li::marker {
+    content: '◎ ';
+  }
+}

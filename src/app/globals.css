@@ -3,7 +3,26 @@
 @tailwind utilities;
 
 @layer base {
-  ul ul {
-    list-style-type: revert;
+  ul li::marker {
+    content: '☀️ ';
+  }
+  ul li li::marker {
+    content: '🌕 ';
+  }
+  ul li li li::marker {
+    content: '⭐ ';
+  }
+  p code {
+    @apply rounded-md bg-code-bg/80 px-1 py-1;
+  }
+  p code::before,
+  p code::after {
+    display: none;
+  }
+}
+
+@layer base {
+  .custom-prose {
+    @apply prose prose-custom md:prose-xl lg:prose-2xl;
   }
 }

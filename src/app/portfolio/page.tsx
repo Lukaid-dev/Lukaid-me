@@ -1,3 +1,4 @@
+import './portfolio.css';
 import Profile from './components/profile';
 import Skills from './components/skills';
 import Career from './components/career';
