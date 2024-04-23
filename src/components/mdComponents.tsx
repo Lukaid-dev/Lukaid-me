@@ -37,7 +37,7 @@ const markdownComponents: Components = {
     const Icon = getIcon(language!);
     if (!language) return <pre className="m-2" {...props} />;
     return (
-      <div className="bg-code-bg m-2 flex flex-col rounded-lg">
+      <div className="m-2 flex flex-col rounded-lg bg-code-bg">
         <div className=" flex items-center justify-between px-4 py-2">
           <div className="flex items-center gap-4 text-gray-400">
             <span className="text-lg">{Icon}</span>
@@ -72,13 +72,9 @@ const markdownComponents: Components = {
       </SyntaxHighlighter>
     );
   },
-  // p: ({ node, ...props }) => {
-  //   console.log(props.children);
-  //   if (typeof props.children === 'object' && props.children?.props?.tagName === 'code') {
-  //     return <code className="bg-code-bg" {props.children.props.children} />;
-  //   }
-  //   return <p {...props} />;
-  // },
+  a: ({ node, ...props }) => {
+    return <a target="_blank" {...props} />;
+  },
 };
 
 export default markdownComponents;

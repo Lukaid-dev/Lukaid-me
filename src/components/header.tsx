@@ -10,7 +10,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="mx-auto flex items-center justify-between px-4 py-2">
+    <nav className="sticky top-0 z-10 mx-auto flex items-center justify-between bg-white px-4 py-2 shadow-[rgba(0,0,15,0.1)_0px_5px_4px_0px]">
       <Link
         className="rounded-xl px-4 py-2 text-2xl font-bold text-primary hover:bg-gradient-to-br hover:from-third hover:via-primary/15 hover:to-third"
         href="/">
