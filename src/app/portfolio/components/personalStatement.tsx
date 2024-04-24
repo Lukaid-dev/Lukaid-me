@@ -3,13 +3,13 @@ import Naming from './naming';
 
 export default function PersonalStatement() {
   return (
-    <div className="ring-border text-text mx-4 flex flex-col gap-4 rounded-xl p-4 outline-none ring">
+    <div className="mx-4 flex flex-col gap-4 rounded-xl p-4 text-text outline-none ring ring-guide">
       <div className="flex gap-4">
         <span className="text-3xl font-semibold text-gray-950">자기소개</span>
       </div>
       <Divider />
       <Naming name="언제든 필요한 곳에" />
-      <div className="text-text pl-4">
+      <div className="pl-4 text-text">
         <ul className="list-inside list-disc [&_ul]:pl-8">
           <li>2년차 개발자로, 스타트업에서 웹과 앱 서비스를 개발했습니다.</li>
           <li>
@@ -29,7 +29,7 @@ export default function PersonalStatement() {
         </ul>
       </div>
       <Naming name="지속가능한 개발자" />
-      <div className="text-text pl-4">
+      <div className="pl-4 text-text">
         <ul className="list-inside list-disc [&_ul]:pl-8">
           <li>
             <span className="font-bold text-gray-950">

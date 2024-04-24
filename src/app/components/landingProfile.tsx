@@ -15,9 +15,9 @@ export default function LandingProfile() {
           </a>
         </div>
         <div className="flex items-end gap-2">
-          <span className="text-3xl font-bold text-primary">이성우</span>
-          <span className="text-2xl font-semibold text-primary">/</span>
-          <span className="text-1xl font-semibold text-primary">Lukaid</span>
+          <span className="text-3xl font-bold text-accent">이성우</span>
+          <span className="text-2xl font-semibold text-accent">/</span>
+          <span className="text-1xl font-semibold text-accent">Lukaid</span>
         </div>
       </div>
       <div className="flex w-full flex-col items-center justify-center gap-4 rounded-lg bg-back px-16 py-8">

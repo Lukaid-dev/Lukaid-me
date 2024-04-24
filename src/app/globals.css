@@ -21,12 +21,6 @@
   }
 }
 
-@layer base {
-  .custom-prose {
-    @apply prose prose-custom md:prose-xl lg:prose-2xl;
-  }
-}
-
 @layer components {
   .text-2xs {
     font-size: 0.625rem;

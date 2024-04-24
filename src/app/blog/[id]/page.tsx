@@ -9,9 +9,9 @@ export default async function PostPage({ params }: { params: { id: string } }) {
   const markdown = res.content;
   const { content } = matter(markdown);
   return (
-    <article className="mx-auto p-4 sm:p-2">
+    <article className="mx-auto rounded-lg bg-back p-4 sm:p-6">
       <Markdown
-        className="custom-prose mx-auto max-w-screen-xl"
+        className="prose mx-auto max-w-screen-xl text-text"
         remarkPlugins={[remarkGfm]}
         components={mdComponents}>
         {content
