@@ -24,7 +24,7 @@ const config: Config = {
         text: 'rgb(var(--color--text) / <alpha-value>)',
         fore: 'rgb(var(--color--fore) / <alpha-value>)',
         back: 'rgb(var(--color--back) / <alpha-value>)',
-        back_secondary: 'rgb(var(--color--back-secondary) / <alpha-value>)',
+        back_layout: 'rgb(var(--color--back_layout) / <alpha-value>)',
         gutter: 'rgb(var(--color--gutter) / <alpha-value>)',
         guide: 'rgb(var(--color--guide) / <alpha-value>)',
         accent: 'rgb(var(--color--accent) / <alpha-value>)',

@@ -27,12 +27,19 @@
   }
 }
 
+@layer components {
+  .text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+
 /* one-light */
 @layer base {
   :root {
     --color--fore: 56 58 66;
     --color--back: 250 250 250;
-    --color--back-secondary: 235 235 235;
+    --color--back_layout: 222 230 235;
     --color--gutter: 161 161 161;
     --color--guide: 207 208 209;
     --color--text: 56 58 66;
@@ -50,7 +57,7 @@
   [data-theme='one-dark'] {
     --color--fore: 37 41 49;
     --color--back: 40 44 52;
-    --color--back-secondary: 65 69 77;
+    --color--back_layout: 65 69 77;
     --color--gutter: 29 32 37;
     --color--guide: 204 204 204;
     --color--text: 171 178 191;
@@ -68,7 +75,7 @@
   [data-theme='one-light'] {
     --color--fore: 56 58 66;
     --color--back: 250 250 250;
-    --color--back-secondary: 235 235 235;
+    --color--back_layout: 222 230 235;
     --color--gutter: 161 161 161;
     --color--guide: 207 208 209;
     --color--text: 56 58 66;
@@ -86,7 +93,7 @@
   [data-theme='github-dark'] {
     --color--fore: 139 148 158;
     --color--back: 13 17 23;
-    --color--back-secondary: 33 38 45;
+    --color--back_layout: 33 38 45;
     --color--gutter: 33 38 45;
     --color--guide: 149 157 165;
     --color--text: 204 204 204;
@@ -104,7 +111,7 @@
   [data-theme='github-light'] {
     --color--fore: 247 248 250;
     --color--back: 255 255 255;
-    --color--back-secondary: 240 240 240;
+    --color--back_layout: 240 240 240;
     --color--gutter: 206 208 210;
     --color--guide: 209 213 218;
     --color--text: 36 41 46;
