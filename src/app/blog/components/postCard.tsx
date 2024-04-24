@@ -1,6 +1,6 @@
 import { PostPreviewType } from '@/app/types/postPreview';
 import Thumbnail from './thumbnail';
-import { formatToTimeAgo } from '@/lib/utils';
+import { formatToTimeAgo } from '@/lib/utils/formatToTimeAgo';
 import Link from 'next/link';
 
 export default function PostCard(preview: PostPreviewType) {
