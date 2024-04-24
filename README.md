@@ -25,8 +25,6 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
 - pagination, 무한 스크롤
 - Tag, 카테고리, 검색기능
 - Theme 마무리
-  - Extra attributes from the server: data-theme 에러 해결
-  - 배포판에서는 "setInitTheme is not defined" 에러가 나오면서 새로고침시 data-theme이 null이 됨..
   - 블로그 쪽 테마 적용 마무리
   - 포트폴리오 쪽 테마 적용 마무리
 - 페이지 전환시 로딩바
