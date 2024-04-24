@@ -31,6 +31,13 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
 - error handling
   - not found page
   - error page
+- 글로벌 상태관리 도입
+  - 이거 안해도 될 줄 알았는데, 테마에 따라서 변경이 필요한 부분 (svg 색상 같은거)이 필요해짐
+  - 추가적으로 추후에 구현 될 검색이나, 태그, 카테고리 필터링에도 필요할 것 같음
+- SEO
+  - meta tag
+  - sitemap
+  - robots.txt
 
 ### 참고자료
 

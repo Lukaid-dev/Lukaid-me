@@ -11,7 +11,7 @@ import PersonalStatement from './components/personalStatement';
 
 export default function Portfolio() {
   return (
-    <div className="flex w-full flex-col gap-4 rounded-xl py-4 shadow-xl">
+    <div className="flex w-full flex-col gap-4 rounded-xl bg-back py-4 shadow-xl">
       <Profile />
       <Skills />
       <Career />
