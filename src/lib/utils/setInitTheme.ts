@@ -20,5 +20,5 @@ export function setInitTheme() {
 
   //현재 테마 모드
   const currentTheme = getInitTheme();
-  document.body.setAttribute('data-theme', currentTheme);
+  if (currentTheme) document.body.setAttribute('data-theme', currentTheme);
 }

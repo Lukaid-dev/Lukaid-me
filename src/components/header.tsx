@@ -56,7 +56,7 @@ const Header = () => {
   return (
     <nav className="sticky top-0 z-10 mx-auto mb-2 flex items-center justify-between rounded-b-lg bg-back px-4 py-2 shadow-[rgba(0,0,15,0.1)_0px_3px_2px_0px]">
       <Link
-        className="rounded-xl px-4 py-2 text-2xl font-bold text-accent hover:bg-gradient-to-br hover:from-guide hover:via-accent/15 hover:to-guide"
+        className="rounded-xl px-4 py-2 text-2xl font-bold text-accent hover:bg-accent/15"
         href="/">
         Lukaid
       </Link>
@@ -64,7 +64,7 @@ const Header = () => {
         {navigationItem.map(({ name, path }) => (
           <Link
             key={path}
-            className={`rounded-xl px-4 py-2 text-text hover:bg-gradient-to-br hover:from-guide hover:via-accent/15 hover:to-guide  ${pathname === path ? 'font-semibold text-gray-950' : 'font-normal'}`}
+            className={`rounded-xl px-4 py-2 text-text hover:bg-accent/15  ${pathname === path ? 'font-semibold text-gray-950' : 'font-normal'}`}
             href={path}>
             {name}
           </Link>
