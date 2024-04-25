@@ -1,11 +1,20 @@
+'use client';
+
+import useThemeStore from '@/app/store/theme';
 import SkillBadge from './skillBadge';
 
 export default function SkillCardClosed({ isOpen }: { isOpen: boolean }) {
+  const theme = useThemeStore((state) => state.theme);
+
   return (
     <div className={`${isOpen ? 'hidden' : 'flex'} flex-col gap-4`}>
       <div className="flex gap-4">
         <SkillBadge isOpen={false} skill="react" />
-        <SkillBadge isOpen={false} skill="nextjs" />
+        {theme === 'one-dark' || theme === 'github-dark' ? (
+          <SkillBadge isOpen={false} skill="nextjs_white" />
+        ) : (
+          <SkillBadge isOpen={false} skill="nextjs" />
+        )}
         <SkillBadge isOpen={false} skill="javascript" />
         <SkillBadge isOpen={false} skill="typescript" />
         <SkillBadge isOpen={false} skill="tailwindcss" />
@@ -17,12 +26,20 @@ export default function SkillCardClosed({ isOpen }: { isOpen: boolean }) {
       </div>
 
       <div className="flex gap-4">
-        <SkillBadge isOpen={false} skill="django" />
+        {theme === 'one-dark' || theme === 'github-dark' ? (
+          <SkillBadge isOpen={false} skill="django_white" />
+        ) : (
+          <SkillBadge isOpen={false} skill="django" />
+        )}
         <SkillBadge isOpen={false} skill="python" />
       </div>
 
       <div className="flex gap-4">
-        <SkillBadge isOpen={false} skill="express" />
+        {theme === 'one-dark' || theme === 'github-dark' ? (
+          <SkillBadge isOpen={false} skill="express_white" />
+        ) : (
+          <SkillBadge isOpen={false} skill="express" />
+        )}
         <SkillBadge isOpen={false} skill="nodejs" />
       </div>
 
