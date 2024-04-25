@@ -1,11 +1,10 @@
 'use client';
 import clsx from 'clsx';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
 
 export default function ProgressBar() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -13,7 +12,7 @@ export default function ProgressBar() {
       setLoading(false);
     };
     end();
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   const handleStart = useCallback(() => {
     setLoading(true);
