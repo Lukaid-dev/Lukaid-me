@@ -1,56 +1,27 @@
 'use client';
 
+import useThemeStore from '@/app/store/theme';
+import { Theme } from '@/app/types/theme';
 import Divider from '@/components/divider';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-type Theme = 'one-dark' | 'one-light' | 'github-dark' | 'github-light';
-
-const changeAttAndStorage = (theme: Theme) => {
-  window.localStorage.setItem('data-theme', theme);
-  document.body.setAttribute('data-theme', theme);
-};
-
 export default function ModalSettingPage() {
-  const [theme, setTheme] = useState<Theme | undefined>(undefined);
+  const theme = useThemeStore((state) => state.theme);
+  const setTheme = useThemeStore((state) => state.setTheme);
+  const toggleTheme = useThemeStore((state) => state.toggleTheme);
+
   const router = useRouter();
   const onCloseClick = () => {
     router.back();
   };
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => {
-      switch (prevTheme) {
-        case 'one-dark':
-          changeAttAndStorage('one-light');
-          return 'one-light';
-        case 'one-light':
-          changeAttAndStorage('github-dark');
-          return 'github-dark';
-        case 'github-dark':
-          changeAttAndStorage('github-light');
-          return 'github-light';
-        case 'github-light':
-          changeAttAndStorage('one-dark');
-          return 'one-dark';
-        default:
-          changeAttAndStorage('one-dark');
-          return 'one-dark';
-      }
-    });
-  };
-
-  useEffect(() => {
-    if (theme !== undefined) {
-      changeAttAndStorage(theme);
-    }
-  }, [theme]);
-
   useEffect(() => {
     const theme = document.body.getAttribute('data-theme');
     setTheme(theme as Theme);
-  }, []);
+  }, [setTheme]);
+
   return (
     <div className="absolute inset-0 z-20 flex items-center justify-center bg-black bg-opacity-50">
       <div className="mx-2 flex max-w-screen-md flex-1 flex-col gap-4 rounded-lg bg-back p-4 text-text">

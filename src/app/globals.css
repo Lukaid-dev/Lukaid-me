@@ -35,7 +35,7 @@
   width: 100%;
   z-index: 10;
   background-color: rgb(var(--color--guide));
-  transition: background-color 0.3s;
+  transition: background-color 1s;
   max-width: 100%;
   overflow: hidden;
 }

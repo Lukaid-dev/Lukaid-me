@@ -3,10 +3,10 @@
 import Link from 'next/link';
 
 import { Cog6ToothIcon as CogSolid } from '@heroicons/react/24/solid';
-import { Cog6ToothIcon as CogOutline } from '@heroicons/react/24/outline';
 
 import { usePathname } from 'next/navigation';
 import ProgressBar from './progressBar';
+import useThemeStore from '@/app/store/theme';
 
 const navigationItem = [
   { name: '블로그', path: '/blog' },
@@ -15,6 +15,7 @@ const navigationItem = [
 
 const Header = () => {
   const pathname = usePathname();
+  const theme = useThemeStore((state) => state.theme);
 
   return (
     <nav className="sticky top-0 z-10 mx-auto mb-2">
@@ -36,7 +37,11 @@ const Header = () => {
           <Link
             href="/setting"
             className="flex items-center justify-center pl-4">
-            <CogSolid className="size-5" />
+            {theme === 'one-dark' || theme === 'github-dark' ? (
+              <CogSolid className="size-6 text-text" />
+            ) : (
+              <CogSolid className="size-6" />
+            )}
           </Link>
         </div>
       </div>
