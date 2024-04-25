@@ -18,8 +18,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   const initTheme = `(
     ${setInitTheme.toString()}
@@ -30,13 +32,14 @@ export default function RootLayout({
     <html lang="ko">
       <body
         suppressHydrationWarning={true}
-        className={`${inter.className} bg-back_layout mx-auto shadow-xl md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2`}>
+        className={`${inter.className} mx-auto bg-back_layout shadow-xl md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2`}>
         <script
           dangerouslySetInnerHTML={{
             __html: initTheme,
           }}></script>
         <Header />
         {children}
+        {modal}
         <Analytics />
         <SpeedInsights />
       </body>

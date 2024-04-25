@@ -24,20 +24,17 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
   - 업무 - 언어 - 기여 및 성과 이 정도로 규격화 더 좋을 것 같음
 - pagination, 무한 스크롤
 - Tag, 카테고리, 검색기능
-- Theme 마무리
-  - 블로그 쪽 테마 적용 마무리
-  - 포트폴리오 쪽 테마 적용 마무리
 - error handling
   - not found page
   - error page
 - 글로벌 상태관리 도입
   - 이거 안해도 될 줄 알았는데, 테마에 따라서 변경이 필요한 부분 (svg 색상 같은거)이 필요해짐
   - 추가적으로 추후에 구현 될 검색이나, 태그, 카테고리 필터링에도 필요할 것 같음
+  - 이거 추가됨에 따라 포트폴리오 쪽 이미지들 테마에 맞게 변경작업 필요
 - SEO
   - meta tag
   - sitemap
   - robots.txt
-- strong tag 추가, 스크린 크기에 따라 글씨 크기 조절
 
 ### 참고자료
 

@@ -1,5 +1,7 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
+
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import ProgressBar from './progressBar';
@@ -70,12 +72,13 @@ const Header = () => {
               {name}
             </Link>
           ))}
-          <button onClick={toggleTheme} className="text-text">
-            <div className="flex flex-col items-center justify-center pl-4">
-              <div className="text-sm">Theme</div>
-              <div className="text-2xs">{theme}</div>
+          <Link
+            href="/setting"
+            className="flex items-center justify-center pl-4">
+            <div className="relative size-5">
+              <Image fill src="/setting.svg" alt="setting" />
             </div>
-          </button>
+          </Link>
         </div>
       </div>
       <ProgressBar />

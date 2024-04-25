@@ -2,9 +2,9 @@ import { ExtraProps } from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Image, { ImageProps } from 'next/image';
-import { BiClipboard } from 'react-icons/bi';
 import { ReactElement } from 'react';
 import { getCurrentLanguage, getIcon } from '@/lib/utils/mdCodeLangName';
+import ClipboardButton from './clipboardButton';
 
 type Components = Partial<{
   [TagName in keyof JSX.IntrinsicElements]:  // Class component:
@@ -40,27 +40,26 @@ const markdownComponents: Components = {
     />
   ),
   pre: ({ node, ...props }) => {
-    const language = (
-      props?.children as ReactElement
-    )?.props?.className?.replace('language-', '');
-    const Icon = getIcon(language!);
-    if (!language) return <pre className="m-2" {...props} />;
-    return (
-      <div className="m-2 flex flex-col rounded-lg bg-back_layout">
-        <div className=" flex items-center justify-between px-4 py-2">
-          <div className="flex items-center gap-4 text-text">
-            <span className="text-lg">{Icon}</span>
-            <span className="text-xs">{language}</span>
+    const content = props.children as ReactElement;
+
+    if (content) {
+      const language = content.props.className?.replace('language-', '');
+      const Icon = getIcon(language);
+      if (!language) return <pre className="m-2" {...props} />;
+      return (
+        <div className="m-2 flex flex-col rounded-lg bg-back_layout">
+          <div className=" flex items-center justify-between px-4 py-2">
+            <div className="flex items-center gap-4 text-text">
+              <span className="text-lg">{Icon}</span>
+              <span className="text-xs">{language}</span>
+            </div>
+            <ClipboardButton text={content.props.children} />
           </div>
-          <button
-            data-clipboard=""
-            className="active:text-green-500 text-lg text-text">
-            <BiClipboard />
-          </button>
+          {content}
         </div>
-        {props.children}
-      </div>
-    );
+      );
+    }
+    return <pre className="m-2" {...props} />;
   },
   code: ({ node, ...props }) => {
     const currentLanguage = getCurrentLanguage(
