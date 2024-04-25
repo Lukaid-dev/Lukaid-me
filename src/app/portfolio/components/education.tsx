@@ -13,21 +13,21 @@ export default function Education() {
         description="네이버 커넥트 재단 주관 웹 풀스택 개발자 양성 커리큘럼"
       />
       <div className="pl-4 text-text">
-        <ul className="leading-7 leading-7 [&_ul]:pl-6">
+        <ul className="leading-7 [&_ul]:pl-6">
           <li>기간: 2023.07 ~ 2023.12 (5개월)</li>
           <li>네이버 커넥트 재단 주관 웹 풀스택 개발자 양성 커리큘럼</li>
         </ul>
       </div>
       <Naming name="한국항공대 일반대학원" />
       <div className="pl-4 text-text">
-        <ul className="leading-7 leading-7 [&_ul]:pl-6">
+        <ul className="leading-7 [&_ul]:pl-6">
           <li>기간: 2021.03 ~ 2021.08 (6개월)</li>
           <li>물류학 중퇴</li>
         </ul>
       </div>
       <Naming name="한국항공대" />
       <div className="pl-4 text-text">
-        <ul className="leading-7 leading-7 [&_ul]:pl-6">
+        <ul className="leading-7 [&_ul]:pl-6">
           <li>기간: 2014.03 ~ 2021.02</li>
           <li>항공물류전공 졸업</li>
         </ul>
