@@ -46,7 +46,7 @@ const markdownComponents: Components = {
     const Icon = getIcon(language!);
     if (!language) return <pre className="m-2" {...props} />;
     return (
-      <div className="bg-back_layout m-2 flex flex-col rounded-lg">
+      <div className="m-2 flex flex-col rounded-lg bg-back_layout">
         <div className=" flex items-center justify-between px-4 py-2">
           <div className="flex items-center gap-4 text-text">
             <span className="text-lg">{Icon}</span>
@@ -93,7 +93,7 @@ const markdownComponents: Components = {
     <thead className="rounded-t-lg bg-guide text-text" {...props} />
   ),
   tbody: ({ node, ...props }) => (
-    <tbody className="bg-back_layout rounded-b-lg" {...props} />
+    <tbody className="rounded-b-lg bg-back_layout" {...props} />
   ),
   th: (props) => (
     <th
@@ -115,6 +115,9 @@ const markdownComponents: Components = {
   ),
   blockquote: ({ node, ...props }) => (
     <blockquote className="text-text" {...props} />
+  ),
+  strong: ({ node, ...props }) => (
+    <strong className="font-semibold text-accent" {...props} />
   ),
 };
 

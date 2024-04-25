@@ -15,7 +15,7 @@ export default function Research() {
   return (
     <div className="mx-4 flex flex-col gap-4 rounded-xl p-4 text-text outline-none ring ring-guide">
       <div className="flex gap-4">
-        <span className="text-3xl font-semibold text-gray-950">Research</span>
+        <span className="text-3xl font-semibold text-text">Research</span>
       </div>
       <Divider />
       <SummaryCard summaries={summaries} />

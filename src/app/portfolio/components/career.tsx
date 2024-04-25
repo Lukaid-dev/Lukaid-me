@@ -34,7 +34,7 @@ export default function Career() {
   return (
     <div className="mx-4 flex flex-col gap-4 rounded-xl p-4 text-text outline-none ring ring-guide">
       <div className="flex gap-4">
-        <span className="text-3xl font-semibold text-gray-950">Career</span>
+        <span className="text-3xl font-semibold text-text">Career</span>
       </div>
       <Divider />
       <Naming

@@ -24,7 +24,7 @@ export default function Skills() {
   return (
     <div className="mx-4 flex flex-col rounded-xl p-4 text-text outline-none ring ring-guide">
       <div className="mb-4 flex justify-between gap-4">
-        <span className="text-3xl font-semibold text-gray-950">Skills</span>
+        <span className="text-3xl font-semibold text-text">Skills</span>
         <div
           onClick={onClick}
           className="flex text-text/80 hover:cursor-pointer">

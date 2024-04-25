@@ -7,12 +7,12 @@
     list-style-type: revert;
   }
   ul li::marker {
-    content: '● ';
+    content: '- ';
   }
   ul li li::marker {
-    content: '○ ';
+    content: '= ';
   }
   ul li li li::marker {
-    content: '◎ ';
+    content: '- ';
   }
 }

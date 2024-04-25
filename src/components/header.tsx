@@ -65,7 +65,7 @@ const Header = () => {
           {navigationItem.map(({ name, path }) => (
             <Link
               key={path}
-              className={`rounded-xl px-4 py-2 text-text hover:bg-accent/15  ${pathname === path ? 'font-semibold text-gray-950' : 'font-normal'}`}
+              className={`rounded-xl px-4 py-2 text-text hover:bg-accent/15  ${pathname === path ? 'font-semibold text-text' : 'font-normal'}`}
               href={path}>
               {name}
             </Link>

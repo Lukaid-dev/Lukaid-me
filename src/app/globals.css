@@ -41,12 +41,12 @@
 }
 
 .progress-bar.active {
-  background-color: rgb(var(--color--guide));
+  background-color: rgb(var(--color--accent));
   background-image: linear-gradient(
     90deg,
-    rgba(var(--color--accent), 0) 55%,
-    rgb(var(--color--accent)) 50%,
-    rgba(var(--color--accent), 0) 60%
+    rgba(255, 255, 255, 0) 55%,
+    rgb(255, 255, 255) 50%,
+    rgba(255, 255, 255, 0) 60%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite linear;

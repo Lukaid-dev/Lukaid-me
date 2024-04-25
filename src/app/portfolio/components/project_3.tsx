@@ -41,7 +41,7 @@ export default function Project_3() {
   return (
     <div className="mx-4 flex flex-col gap-4 rounded-xl p-4 text-text outline-none ring ring-guide">
       <div className="flex gap-4">
-        <span className="text-3xl font-semibold text-gray-950">Project</span>
+        <span className="text-3xl font-semibold text-text">Project</span>
       </div>
       <Divider />
       <Naming
