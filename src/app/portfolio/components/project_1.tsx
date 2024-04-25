@@ -47,7 +47,7 @@ export default function Project_1() {
       <Period duration="2023.12.17 ~ 2023.12.24 (일주일)" />
       <SummaryCard summaries={summaries} />
       <div className="pl-4 text-text">
-        <ul className="leading-7 [&_ul]:pl-4">
+        <ul className="leading-7 leading-7 [&_ul]:pl-6">
           <li>
             초기 기능 정의 및 화면 기획 (넓은 연령대를 커버하기 위해 직관적인
             라우팅 기획)

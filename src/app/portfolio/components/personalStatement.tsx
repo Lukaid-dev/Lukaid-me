@@ -10,7 +10,7 @@ export default function PersonalStatement() {
       <Divider />
       <Naming name="언제든 필요한 곳에" />
       <div className="pl-4 text-text">
-        <ul className="leading-7 [&_ul]:pl-4">
+        <ul className="leading-7 leading-7 [&_ul]:pl-6">
           <li>2년차 개발자로, 스타트업에서 웹과 앱 서비스를 개발했습니다.</li>
           <li>
             api, ui, 어드민, 데이터분석 등 서비스에 필요한{' '}
@@ -30,7 +30,7 @@ export default function PersonalStatement() {
       </div>
       <Naming name="지속가능한 개발자" />
       <div className="pl-4 text-text">
-        <ul className="leading-7 [&_ul]:pl-4">
+        <ul className="leading-7 leading-7 [&_ul]:pl-6">
           <li>
             <span className="font-bold text-accent">
               개발과 커뮤니케이션 능력 향상

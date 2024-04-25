@@ -51,7 +51,7 @@ export default function Project_3() {
       <Period duration="2023.02 ~ 2023.08 (7개월)" />
       <SummaryCard summaries={summaries} />
       <div className="pl-4 text-text">
-        <ul className="leading-7 [&_ul]:pl-4">
+        <ul className="leading-7 leading-7 [&_ul]:pl-6">
           <li>초기 기능 정의 및 기획</li>
           <li>
             한대의 로컬 pc에서 서비스 배포 및 개발 서버 구동을 위해 port 분리,

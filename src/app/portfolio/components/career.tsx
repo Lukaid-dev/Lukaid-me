@@ -44,7 +44,7 @@ export default function Career() {
       <Period duration="2022.01 ~ 2023.05 (1년 5개월)" />
       <SummaryCard summaries={summaries} />
       <div className="pl-4 text-text">
-        <ul className="leading-7 [&_ul]:pl-4">
+        <ul className="leading-7 [&_ul]:pl-6">
           <li>프로젝트 기획 참여 (API, DB 설계 및 UI 의견 반영)</li>
           <li>
             어드민 기능 개발
