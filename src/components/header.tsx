@@ -1,9 +1,11 @@
 'use client';
+
 import Link from 'next/link';
-import Image from 'next/image';
+
+import { Cog6ToothIcon as CogSolid } from '@heroicons/react/24/solid';
+import { Cog6ToothIcon as CogOutline } from '@heroicons/react/24/outline';
 
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import ProgressBar from './progressBar';
 
 const navigationItem = [
@@ -11,49 +13,8 @@ const navigationItem = [
   { name: '포트폴리오', path: '/portfolio' },
 ];
 
-type Theme = 'one-dark' | 'one-light' | 'github-dark' | 'github-light';
-
-const changeAttAndStorage = (theme: Theme) => {
-  window.localStorage.setItem('data-theme', theme);
-  document.body.setAttribute('data-theme', theme);
-};
-
 const Header = () => {
   const pathname = usePathname();
-  const [theme, setTheme] = useState<Theme | undefined>(undefined);
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => {
-      switch (prevTheme) {
-        case 'one-dark':
-          changeAttAndStorage('one-light');
-          return 'one-light';
-        case 'one-light':
-          changeAttAndStorage('github-dark');
-          return 'github-dark';
-        case 'github-dark':
-          changeAttAndStorage('github-light');
-          return 'github-light';
-        case 'github-light':
-          changeAttAndStorage('one-dark');
-          return 'one-dark';
-        default:
-          changeAttAndStorage('one-dark');
-          return 'one-dark';
-      }
-    });
-  };
-
-  useEffect(() => {
-    if (theme !== undefined) {
-      changeAttAndStorage(theme);
-    }
-  }, [theme]);
-
-  useEffect(() => {
-    const theme = document.body.getAttribute('data-theme');
-    setTheme(theme as Theme);
-  }, []);
 
   return (
     <nav className="sticky top-0 z-10 mx-auto mb-2">
@@ -75,9 +36,7 @@ const Header = () => {
           <Link
             href="/setting"
             className="flex items-center justify-center pl-4">
-            <div className="relative size-5">
-              <Image fill src="/setting.svg" alt="setting" />
-            </div>
+            <CogSolid className="size-5" />
           </Link>
         </div>
       </div>
