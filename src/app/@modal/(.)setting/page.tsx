@@ -5,7 +5,7 @@ import { Theme } from '@/app/types/theme';
 import Divider from '@/components/divider';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function ModalSettingPage() {
   const theme = useThemeStore((state) => state.theme);
