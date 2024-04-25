@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import ProgressBar from './progressBar';
 
 const navigationItem = [
   { name: '블로그', path: '/blog' },
@@ -18,7 +19,6 @@ const changeAttAndStorage = (theme: Theme) => {
 const Header = () => {
   const pathname = usePathname();
   const [theme, setTheme] = useState<Theme | undefined>(undefined);
-  const [isMount, setMount] = useState(false);
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {
@@ -54,28 +54,31 @@ const Header = () => {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-10 mx-auto mb-2 flex items-center justify-between rounded-b-lg bg-back px-4 py-2 shadow-[rgba(0,0,15,0.1)_0px_3px_2px_0px]">
-      <Link
-        className="rounded-xl px-4 py-2 text-2xl font-bold text-accent hover:bg-accent/15"
-        href="/">
-        Lukaid
-      </Link>
-      <div className="flex">
-        {navigationItem.map(({ name, path }) => (
-          <Link
-            key={path}
-            className={`rounded-xl px-4 py-2 text-text hover:bg-accent/15  ${pathname === path ? 'font-semibold text-gray-950' : 'font-normal'}`}
-            href={path}>
-            {name}
-          </Link>
-        ))}
-        <button onClick={toggleTheme} className="text-text">
-          <div className="flex flex-col items-center justify-center pl-4">
-            <div className="text-sm">Theme</div>
-            <div className="text-2xs">{theme}</div>
-          </div>
-        </button>
+    <nav className="sticky top-0 z-10 mx-auto mb-2">
+      <div className="flex items-center justify-between bg-back px-4 py-2 shadow-[rgba(0,0,15,0.1)_0px_3px_2px_0px]">
+        <Link
+          className="rounded-xl px-4 py-2 text-2xl font-bold text-accent hover:bg-accent/15"
+          href="/">
+          Lukaid
+        </Link>
+        <div className="flex">
+          {navigationItem.map(({ name, path }) => (
+            <Link
+              key={path}
+              className={`rounded-xl px-4 py-2 text-text hover:bg-accent/15  ${pathname === path ? 'font-semibold text-gray-950' : 'font-normal'}`}
+              href={path}>
+              {name}
+            </Link>
+          ))}
+          <button onClick={toggleTheme} className="text-text">
+            <div className="flex flex-col items-center justify-center pl-4">
+              <div className="text-sm">Theme</div>
+              <div className="text-2xs">{theme}</div>
+            </div>
+          </button>
+        </div>
       </div>
+      <ProgressBar />
     </nav>
   );
 };

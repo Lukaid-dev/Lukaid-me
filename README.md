@@ -27,7 +27,6 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
 - Theme 마무리
   - 블로그 쪽 테마 적용 마무리
   - 포트폴리오 쪽 테마 적용 마무리
-- 페이지 전환시 로딩바
 - error handling
   - not found page
   - error page
@@ -38,8 +37,10 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
   - meta tag
   - sitemap
   - robots.txt
+- strong tag 추가, 스크린 크기에 따라 글씨 크기 조절
 
 ### 참고자료
 
 - https://github.com/ParkJeongwoong/ParkJeongwoong.github.io
 - https://github.com/keisokoo/unsangu.com
+- https://velog.io/@brgndy/
