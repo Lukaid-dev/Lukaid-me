@@ -32,7 +32,7 @@ export default function Profile() {
             제너럴리스트(Generalist)
           </span>
           를 추구하며,
-          <span className="font-bold text-accent">함께 가치</span>를 만들어
+          <span className="font-bold text-accent"> 함께 가치</span>를 만들어
           나가는 개발자 이성우입니다.
         </div>
         <div className="text-text">
