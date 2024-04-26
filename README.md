@@ -28,7 +28,6 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
   - not found page
   - error page
 - SEO
-  - meta tag
   - sitemap
   - robots.txt
 

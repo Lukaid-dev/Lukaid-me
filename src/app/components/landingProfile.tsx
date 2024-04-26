@@ -10,7 +10,7 @@ export default function LandingProfile() {
               fill
               className="object-cover"
               src="/lukaid_profile.jpeg"
-              alt={'public/lukaid_profile.jpeg'}
+              alt="lukaid_profile"
             />
           </a>
         </div>
