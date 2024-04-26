@@ -14,11 +14,11 @@ export default async function PinnedPosts() {
       <div className="flex flex-col">
         {res.map((post: PostPinned) => (
           <Link
-            className="flex justify-between p-2 odd:bg-back_layout"
+            className="flex justify-between gap-1 p-2 odd:bg-back_layout"
             href={`/blog/${post.id}`}
             key={post.id}>
-            <div className="">{post.title}</div>
-            <div>{formatToTimeAgo(post.written_at)}</div>
+            <div className="truncate">{post.title}</div>
+            <div className="shrink-0">{formatToTimeAgo(post.written_at)}</div>
           </Link>
         ))}
       </div>

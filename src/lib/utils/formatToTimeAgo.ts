@@ -16,7 +16,7 @@ export function formatToTimeAgo(date: string): string {
     const year = new Date(time).getFullYear();
     const month = new Date(time).getMonth() + 1;
     const day = new Date(time).getDate();
-    return `${year}-${month}-${day}`;
+    return `${year % 100}-${month < 10 ? `0${month}` : month}-${day < 10 ? `0${day}` : day}`;
   } else if (diffInMs >= dayInMs) {
     const diff = Math.round(diffInMs / dayInMs);
     return formatter.format(-diff, 'days');
