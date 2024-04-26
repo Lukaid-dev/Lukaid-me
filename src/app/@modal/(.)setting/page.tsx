@@ -1,26 +1,16 @@
 'use client';
 
-import useThemeStore from '@/app/store/theme';
-import { Theme } from '@/app/types/theme';
 import Divider from '@/components/divider';
+import ToggleThemeButton from '@/components/toggleThemeButton';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 export default function ModalSettingPage() {
-  const theme = useThemeStore((state) => state.theme);
-  const setTheme = useThemeStore((state) => state.setTheme);
-  const toggleTheme = useThemeStore((state) => state.toggleTheme);
-
   const router = useRouter();
   const onCloseClick = () => {
     router.back();
   };
-
-  useEffect(() => {
-    const theme = document.body.getAttribute('data-theme');
-    setTheme(theme as Theme);
-  }, [setTheme]);
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -39,14 +29,7 @@ export default function ModalSettingPage() {
           </button>
         </div>
         <Divider />
-        <div className="flex items-center justify-between">
-          <div className="hover:cursor-pointer">Toggle Theme</div>
-          <button
-            onClick={toggleTheme}
-            className="rounded-xl bg-accent px-4 py-2 font-medium text-white outline-none transition-transform hover:cursor-pointer active:scale-90">
-            {theme}
-          </button>
-        </div>
+        <ToggleThemeButton />
       </div>
     </div>
   );

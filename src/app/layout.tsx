@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next/types';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Inter } from 'next/font/google';

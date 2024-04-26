@@ -9,6 +9,10 @@ import Research from './components/research';
 import Education from './components/education';
 import PersonalStatement from './components/personalStatement';
 
+export const metadata = {
+  title: 'Portfolio',
+};
+
 export default function Portfolio() {
   return (
     <div

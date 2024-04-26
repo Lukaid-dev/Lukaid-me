@@ -4,6 +4,13 @@ import Markdown from 'react-markdown';
 import mdComponents from '@/components/mdComponents';
 import { getPostId } from '@/api/getPostId';
 
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const res = await getPostId(params.id);
+  return {
+    title: res.title,
+  };
+}
+
 export default async function PostPage({ params }: { params: { id: string } }) {
   const res = await getPostId(params.id);
   const markdown = res.content;
