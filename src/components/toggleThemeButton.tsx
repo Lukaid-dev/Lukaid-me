@@ -16,7 +16,7 @@ export default function ToggleThemeButton() {
 
   return (
     <div className="flex items-center justify-between">
-      <div className="hover:cursor-pointer">Toggle Theme</div>
+      <div>Toggle Theme</div>
       <button
         onClick={toggleTheme}
         className="rounded-xl bg-accent px-4 py-2 font-medium text-white outline-none transition-transform hover:cursor-pointer active:scale-90">

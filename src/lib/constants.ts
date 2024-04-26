@@ -2,6 +2,7 @@ export const baseUrl = process.env.BASE_URL;
 export const revalidate = Number(process.env.REVALIDATE);
 
 export const skills = [
+  'React',
   'Nextjs',
   'JavaScript',
   'TypeScript',
@@ -14,7 +15,6 @@ export const skills = [
   'Nodejs',
   'Ubuntu',
   'Docker',
-  'React',
 ];
 export const colors = [
   'text-accent',

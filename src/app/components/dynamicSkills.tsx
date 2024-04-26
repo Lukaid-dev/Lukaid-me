@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 export default function DynamicSkills() {
   const [text, setText] = useState('React');
-  const [color, setColor] = useState('text-gold');
+  const [color, setColor] = useState('text-accent');
   const [displayText, setDisplayText] = useState('');
   const [isWriting, setIsWriting] = useState(true);
 
@@ -20,21 +20,21 @@ export default function DynamicSkills() {
       return () => clearInterval(interval);
     } else if (text !== displayText && isWriting) {
       // 글자가 완성되지 않았다면 한글자 추가
-      const time = 100;
+      const time = 500 / text.length;
       const interval = setInterval(() => {
         setDisplayText((prev) => text.slice(0, prev.length + 1));
       }, time);
       return () => clearInterval(interval);
     } else if (displayText !== '' && !isWriting) {
       // 글자가 완전히 지워지지 않았다면 한글자 삭제
-      const time = 100;
+      const time = 500 / text.length;
       const interval = setInterval(() => {
         setDisplayText((prev) => prev.slice(0, prev.length - 1));
       }, time);
       return () => clearInterval(interval);
     } else if (displayText === '' && !isWriting) {
       // 글자가 완전히 지워지면 다음 글자로 넘어감
-      const time = 100;
+      const time = 500;
       const interval = setInterval(() => {
         setIsWriting(true);
         setDisplayText('');
@@ -43,8 +43,7 @@ export default function DynamicSkills() {
       }, time);
       return () => clearInterval(interval);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [displayText, text]);
+  }, [color, displayText, isWriting, text]);
 
   return <div className={`${color}`}>{displayText}</div>;
 }

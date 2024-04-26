@@ -1,4 +1,5 @@
 import Divider from '@/components/divider';
+import ThemePreview from '@/components/themePreview';
 import ToggleThemeButton from '@/components/toggleThemeButton';
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function ModalSettingPage() {
         <div className="text-2xl font-bold text-text">Settings</div>
         <Divider />
         <ToggleThemeButton />
+        <ThemePreview />
       </div>
     </div>
   );
