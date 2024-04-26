@@ -17,5 +17,6 @@
     "velcdn",
     "velog",
     "Zustand"
-  ]
+  ],
+  "svg.preview.background": "transparent"
 }
