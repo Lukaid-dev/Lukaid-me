@@ -12,9 +12,9 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
         <div className="flex gap-6">
           <SkillBadge isOpen={isOpen} skill="react" />
           {theme === 'one-dark' || theme === 'github-dark' ? (
-            <SkillBadge isOpen={false} skill="nextjs_white" />
+            <SkillBadge isOpen={isOpen} skill="nextjs_white" />
           ) : (
-            <SkillBadge isOpen={false} skill="nextjs" />
+            <SkillBadge isOpen={isOpen} skill="nextjs" />
           )}
         </div>
         <div className="flex pl-6">
@@ -63,9 +63,9 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
       <div className="flex flex-col gap-2">
         <div className="flex gap-6">
           {theme === 'one-dark' || theme === 'github-dark' ? (
-            <SkillBadge isOpen={false} skill="django_white" />
+            <SkillBadge isOpen={isOpen} skill="django_white" />
           ) : (
-            <SkillBadge isOpen={false} skill="django" />
+            <SkillBadge isOpen={isOpen} skill="django" />
           )}
           <SkillBadge isOpen={isOpen} skill="python" />
         </div>
@@ -83,9 +83,9 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
       <div className="flex flex-col gap-2">
         <div className="flex gap-6">
           {theme === 'one-dark' || theme === 'github-dark' ? (
-            <SkillBadge isOpen={false} skill="express_white" />
+            <SkillBadge isOpen={isOpen} skill="express_white" />
           ) : (
-            <SkillBadge isOpen={false} skill="express" />
+            <SkillBadge isOpen={isOpen} skill="express" />
           )}
           <SkillBadge isOpen={isOpen} skill="nodejs" />
         </div>
