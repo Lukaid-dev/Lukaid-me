@@ -18,7 +18,19 @@ export default function DynamicSkills() {
     'Docker',
     'React',
   ];
+  const colors = [
+    'text-accent',
+    'text-purple',
+    'text-green',
+    'text-cyan',
+    'text-rose',
+    'text-orange',
+    'text-red',
+    'text-blue',
+    'text-gold',
+  ];
   const [text, setText] = useState('React');
+  const [color, setColor] = useState('text-gold');
   const [displayText, setDisplayText] = useState('');
   const [isWriting, setIsWriting] = useState(true);
 
@@ -52,11 +64,12 @@ export default function DynamicSkills() {
         setIsWriting(true);
         setDisplayText('');
         setText(skills[skills.indexOf(text) + 1] || skills[0]);
+        setColor(colors[colors.indexOf(color) + 1] || colors[0]);
       }, time);
       return () => clearInterval(interval);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [displayText, text]);
 
-  return <div>{displayText}</div>;
+  return <div className={`${color}`}>{displayText}</div>;
 }
