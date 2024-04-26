@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import PinnedPosts from './pinnedPosts';
 
 export default function LandingProfile() {
   return (
@@ -20,8 +21,8 @@ export default function LandingProfile() {
           <span className="text-1xl font-semibold text-accent">Lukaid</span>
         </div>
       </div>
-      <div className="flex w-full flex-col items-center justify-center gap-4 rounded-lg bg-back px-16 py-8">
-        featured post
+      <div className="flex w-full flex-col items-center justify-start gap-4 rounded-lg bg-back p-8">
+        <PinnedPosts />
       </div>
     </div>
   );

@@ -1,34 +1,9 @@
 'use client';
 
+import { colors, skills } from '@/lib/constants';
 import { useEffect, useState } from 'react';
 
 export default function DynamicSkills() {
-  const skills = [
-    'Nextjs',
-    'JavaScript',
-    'TypeScript',
-    'TailwindCSS',
-    'Flutter',
-    'Dart',
-    'Django',
-    'Python',
-    'Express',
-    'Nodejs',
-    'Ubuntu',
-    'Docker',
-    'React',
-  ];
-  const colors = [
-    'text-accent',
-    'text-purple',
-    'text-green',
-    'text-cyan',
-    'text-rose',
-    'text-orange',
-    'text-red',
-    'text-blue',
-    'text-gold',
-  ];
   const [text, setText] = useState('React');
   const [color, setColor] = useState('text-gold');
   const [displayText, setDisplayText] = useState('');
