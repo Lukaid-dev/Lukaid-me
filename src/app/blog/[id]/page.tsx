@@ -22,10 +22,8 @@ export default async function PostPage({ params }: { params: { id: string } }) {
         remarkPlugins={[remarkGfm]}
         components={mdComponents}>
         {content
-          .replace(/\n\s\n\s/gi, '\n\n&nbsp;\n\n')
-          .replace(/\*\*/gi, '@$_%!^')
-          .replace(/@\$_%!\^/gi, '**')
-          .replace(/<\/?u>/gi, '*')}
+          .replace(/<br>/gi, '\n\n&nbsp;\n\n')
+          .replace(/<br \/>/gi, '\n\n&nbsp;\n\n')}
       </Markdown>
     </article>
   );
