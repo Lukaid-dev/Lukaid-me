@@ -2,9 +2,10 @@ import './portfolio.css';
 import Profile from './components/profile';
 import Skills from './components/skills';
 import Career from './components/career';
-import Project_1 from './components/project_1';
-import Project_2 from './components/project_2';
-import Project_3 from './components/project_3';
+import ProjectLukaidMe from './components/ProjectLukaidMe';
+import ProjectMobileInvitation from './components/ProjectMobileInvitation';
+import ProjectBaekjoonRooms from './components/ProjectBaekjoonRooms';
+import ProjectFourHours from './components/ProjectFourHours';
 import Research from './components/research';
 import Education from './components/education';
 import PersonalStatement from './components/personalStatement';
@@ -21,9 +22,10 @@ export default function Portfolio() {
       <Profile />
       <Skills />
       <Career />
-      <Project_1 />
-      <Project_2 />
-      <Project_3 />
+      <ProjectLukaidMe />
+      <ProjectMobileInvitation />
+      <ProjectBaekjoonRooms />
+      <ProjectFourHours />
       <Research />
       <Education />
       <PersonalStatement />

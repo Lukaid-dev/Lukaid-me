@@ -12,7 +12,7 @@ export default function SkillBadge({
 
   return (
     <div className="flex items-end gap-2">
-      <div className="relative size-8 gap-2 overflow-hidden rounded-xl">
+      <div className="relative size-8 gap-2 overflow-hidden rounded">
         <Image fill src={`/${skill}.svg`} alt={skill} />
       </div>
       <p className={`${isOpen || 'hidden'}`}>{display_text}</p>

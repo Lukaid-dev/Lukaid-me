@@ -45,7 +45,6 @@ export default function Career() {
       <SummaryCard summaries={summaries} />
       <div className="pl-4 text-text">
         <ul className="leading-7 [&_ul]:pl-6">
-          <li>프로젝트 기획 참여 (API, DB 설계 및 UI 의견 반영)</li>
           <li>
             어드민 기능 개발
             <ul>
@@ -54,7 +53,7 @@ export default function Career() {
             </ul>
           </li>
           <li>
-            노래방 리스트 검색 개발 (Python, Elasticsearch, Nori tokenizer)
+            indexing 기반 검색 api 개발 (Python, Elasticsearch, Nori tokenizer)
           </li>
           <li>
             커뮤니티 기능 개발
@@ -98,8 +97,8 @@ export default function Career() {
             앱 시작 로직 개발
             <ul>
               <li>
-                팝업, 알림 및 트래킹 권한 동의 개발, sharedPreference service
-                공용화 등 (Flutter)
+                팝업, 알림 및 트래킹 권한 동의 개발, 로컬 데이터 액세스 공용화
+                등 (Flutter)
               </li>
             </ul>
           </li>
@@ -116,17 +115,8 @@ export default function Career() {
             회원가입 절차, 홈팝업, 국제화, 앱 초대 코드 및 인앱 리뷰 개발 참여
             (Flutter)
           </li>
-          <li>
-            Figma 기반 UI 작업
-            <ul>
-              <li>공용 컴포넌트, DefaultWrapper 등 (Flutter)</li>
-            </ul>
-          </li>
           <li>버그 리포트 대응 (Firebase Crashlytics, Flutter)</li>
-          <li>
-            주로 IR용 데이터 분석 및 시각화 작업 진행 (Python, Pandas,
-            Matplotlib)
-          </li>
+          <li>데이터 분석 및 시각화 작업 진행 (Python, Pandas, Matplotlib)</li>
           <li>
             로그 수집 로직 개선 개발 참여{' '}
             <ul>

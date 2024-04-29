@@ -4,13 +4,13 @@ import Period from './period';
 import SummaryCard from './summaryCard';
 import { summary } from '@/app/types/summary';
 
-export default function Project_2() {
+export default function ProjectBaekjoonRooms() {
   const summaries: summary[] = [
     { key: '포지션', value: '프론트엔드 개발자' },
     {
       key: '주요 사용 기술',
       value:
-        'React, TypeScript, tailwindcss, React-Router-dom, React-Query, Socket.IO, Vite',
+        'React, TypeScript, Tailwindcss, React-Router-dom, React-Query, Socket.IO, Vite',
     },
     {
       key: 'GitHub URL',
@@ -47,7 +47,7 @@ export default function Project_2() {
       <Period duration="2023.11.06 ~ 2023.12.15 (6주) / 2024.03.08 ~ (현재 다음 버전으로 리팩토링 및 기능 추가 진행 중)" />
       <SummaryCard summaries={summaries} />
       <div className="pl-4 text-text">
-        <ul className="leading-7 leading-7 [&_ul]:pl-6">
+        <ul className="leading-7 [&_ul]:pl-6">
           <li>
             <a
               href="https://www.acmicpc.net/"

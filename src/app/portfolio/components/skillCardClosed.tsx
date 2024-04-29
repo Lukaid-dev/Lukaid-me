@@ -15,32 +15,22 @@ export default function SkillCardClosed({ isOpen }: { isOpen: boolean }) {
         ) : (
           <SkillBadge isOpen={false} skill="nextjs" />
         )}
-        <SkillBadge isOpen={false} skill="javascript" />
-        <SkillBadge isOpen={false} skill="typescript" />
-        <SkillBadge isOpen={false} skill="tailwindcss" />
-      </div>
-
-      <div className="flex gap-4">
-        <SkillBadge isOpen={false} skill="flutter" />
-        <SkillBadge isOpen={false} skill="dart" />
-      </div>
-
-      <div className="flex gap-4">
         {theme === 'one-dark' || theme === 'github-dark' ? (
           <SkillBadge isOpen={false} skill="django_white" />
         ) : (
           <SkillBadge isOpen={false} skill="django" />
         )}
+      </div>
+
+      <div className="flex gap-4">
+        <SkillBadge isOpen={false} skill="javascript" />
+        <SkillBadge isOpen={false} skill="typescript" />
         <SkillBadge isOpen={false} skill="python" />
       </div>
 
       <div className="flex gap-4">
-        {theme === 'one-dark' || theme === 'github-dark' ? (
-          <SkillBadge isOpen={false} skill="express_white" />
-        ) : (
-          <SkillBadge isOpen={false} skill="express" />
-        )}
-        <SkillBadge isOpen={false} skill="nodejs" />
+        <SkillBadge isOpen={false} skill="flutter" />
+        <SkillBadge isOpen={false} skill="dart" />
       </div>
 
       <div className="flex gap-4">

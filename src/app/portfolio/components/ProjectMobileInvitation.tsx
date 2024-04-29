@@ -4,13 +4,13 @@ import Period from './period';
 import SummaryCard from './summaryCard';
 import { summary } from '@/app/types/summary';
 
-export default function Project_1() {
+export default function ProjectMobileInvitation() {
   const summaries: summary[] = [
     { key: '포지션', value: '풀스택 개발자 (개인 프로젝트)' },
     {
       key: '주요 사용 기술',
       value:
-        'React, TypeScript, tailwindcss, React-Router-dom, TanStack Query, Firebase, Vite',
+        'React, TypeScript, Tailwindcss, React-Router-dom, TanStack Query, Firebase, Vite',
     },
     {
       key: 'GitHub URL',
@@ -47,7 +47,7 @@ export default function Project_1() {
       <Period duration="2023.12.17 ~ 2023.12.24 (일주일)" />
       <SummaryCard summaries={summaries} />
       <div className="pl-4 text-text">
-        <ul className="leading-7 leading-7 [&_ul]:pl-6">
+        <ul className="leading-7 [&_ul]:pl-6">
           <li>
             초기 기능 정의 및 화면 기획 (넓은 연령대를 커버하기 위해 직관적인
             라우팅 기획)
