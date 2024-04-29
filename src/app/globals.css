@@ -28,6 +28,15 @@
   }
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  10% {
+    background-position: -200% 0;
+  }
+}
+
 .progress-bar {
   position: sticky;
   top: 0px;
@@ -35,7 +44,7 @@
   width: 100%;
   z-index: 10;
   background-color: rgb(var(--color--guide));
-  transition: background-color 1s;
+  transition: background-color 0.3s;
   max-width: 100%;
   overflow: hidden;
 }
