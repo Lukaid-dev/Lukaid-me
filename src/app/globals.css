@@ -4,13 +4,13 @@
 
 @layer base {
   ul li::marker {
-    content: '☀️ ';
+    content: '- ';
   }
   ul li li::marker {
-    content: '🌕 ';
+    content: '= ';
   }
   ul li li li::marker {
-    content: '⭐ ';
+    content: '- ';
   }
   p code {
     @apply rounded-md bg-code-bg/80 px-1 py-1;

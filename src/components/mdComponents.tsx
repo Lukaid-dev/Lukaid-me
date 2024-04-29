@@ -65,7 +65,15 @@ const markdownComponents: Components = {
     const currentLanguage = getCurrentLanguage(
       props.className?.replace('language-', ''),
     );
-    if (!currentLanguage) return <code className="text-white" {...props} />;
+    if (!currentLanguage)
+      // if there is ::before and ::after in css, remove it
+      return (
+        <code
+          className="mr-1 rounded bg-code-bg px-2 py-1 text-white before:hidden after:hidden"
+          {...props}
+        />
+      );
+    // return <code className="bg-code-bg text-white" {...props} />;
     return (
       <div className="bg-back_layout p-2">
         <SyntaxHighlighter
@@ -83,7 +91,7 @@ const markdownComponents: Components = {
     );
   },
   a: ({ node, ...props }) => {
-    return <a className="text-text" {...props} />;
+    return <a className="text-text" {...props}></a>;
   },
   table: ({ node, ...props }) => (
     <table className="my-4 table-auto border-collapse" {...props} />
@@ -117,6 +125,9 @@ const markdownComponents: Components = {
   ),
   strong: ({ node, ...props }) => (
     <strong className="font-semibold text-accent" {...props} />
+  ),
+  ul: ({ node, ...props }) => (
+    <ul className="list-disc overflow-auto pl-4" {...props} />
   ),
 };
 
