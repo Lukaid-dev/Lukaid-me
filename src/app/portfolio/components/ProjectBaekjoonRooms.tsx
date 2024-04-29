@@ -51,7 +51,6 @@ export default function ProjectBaekjoonRooms() {
           <li>
             <a
               href="https://www.acmicpc.net/"
-              rel="noreferrer"
               className="underline-offset-3 underline">
               BOJ
             </a>
@@ -61,7 +60,6 @@ export default function ProjectBaekjoonRooms() {
             사용자의 BOJ 트래픽을 트래킹하여 제출 여부를 파악하기 위해{' '}
             <a
               href="https://chromewebstore.google.com/detail/baekjoonrooms/fndogmcoaeenjcihljbahpdlfinkepeh"
-              rel="noreferrer"
               className="underline-offset-3 underline">
               Chrome Extension
             </a>

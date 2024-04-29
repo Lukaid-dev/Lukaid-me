@@ -25,10 +25,7 @@ export default function Summary({ summary }: { summary: summary }) {
           <div className="flex gap-2 overflow-auto">
             {summary.urls?.map((url, index) => (
               <div key={url.title} className="flex shrink-0 gap-2">
-                <a
-                  href={url.link}
-                  rel="noreferrer"
-                  className="underline-offset-3 underline">
+                <a href={url.link} className="underline-offset-3 underline">
                   {url.title}
                 </a>
                 {index !== summary.urls!.length - 1 && <div> / </div>}

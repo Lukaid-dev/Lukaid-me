@@ -27,7 +27,6 @@ export default function Research() {
             통한 트렌드 분석
             <a
               href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11057848"
-              rel="noreferrer"
               className="underline-offset-3 underline">
               (링크)
             </a>
@@ -36,7 +35,6 @@ export default function Research() {
             딥러닝 기반 텍스트 분류 모델을 활용한 국내 이커머스 사용자 리뷰 분석
             <a
               href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10576923"
-              rel="noreferrer"
               className="underline-offset-3 underline">
               (링크)
             </a>
