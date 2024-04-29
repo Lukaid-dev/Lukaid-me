@@ -73,7 +73,6 @@ export default function ProjectMobileInvitation() {
             정적 이미지 서빙{' '}
             <a
               href="https://velog.io/@lukaid/r68u67rl"
-              target="_blank"
               rel="noreferrer"
               className="underline-offset-3 underline">
               [포스팅]

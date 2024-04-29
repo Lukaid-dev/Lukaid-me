@@ -83,7 +83,7 @@ const markdownComponents: Components = {
     );
   },
   a: ({ node, ...props }) => {
-    return <a className="text-text" target="_blank" {...props} />;
+    return <a className="text-text" {...props} />;
   },
   table: ({ node, ...props }) => (
     <table className="my-4 table-auto border-collapse" {...props} />

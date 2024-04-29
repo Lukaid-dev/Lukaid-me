@@ -27,7 +27,6 @@ export default function Summary({ summary }: { summary: summary }) {
               <div key={url.title} className="flex shrink-0 gap-2">
                 <a
                   href={url.link}
-                  target="_blank"
                   rel="noreferrer"
                   className="underline-offset-3 underline">
                   {url.title}

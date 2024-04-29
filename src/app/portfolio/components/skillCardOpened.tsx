@@ -61,8 +61,7 @@ export default function SkillCardOpened({ isOpen }: { isOpen: boolean }) {
           학습했고, 이를 통해 언어의 특성에 대해 깊게 공부했습니다. 추가로{' '}
           <a
             className="text-accent"
-            href="https://m.yes24.com/Goods/Detail/43219481"
-            target="_blank">
+            href="https://m.yes24.com/Goods/Detail/43219481">
             You Don’t Know JS
           </a>
           를 읽으며 언어의 동작 원리와 특성에 대해 더 깊게 이해하고, 이를 코드에

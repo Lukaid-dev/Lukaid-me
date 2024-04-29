@@ -6,7 +6,7 @@ export default function LandingProfile() {
     <div className="flex w-full flex-col gap-4 p-4 text-text md:flex-row">
       <div className="flex flex-col items-center justify-center gap-4 rounded-lg bg-back px-16 py-8">
         <div className="relative size-28 overflow-hidden rounded-full md:size-40">
-          <a href="https://github.com/Lukaid-dev" target="_blank">
+          <a href="https://github.com/Lukaid-dev">
             <Image
               fill
               className="object-cover"
