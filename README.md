@@ -18,19 +18,20 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
 
 ### 개발
 
-앞으로 개발 사항
+앞으로 개발 사항 우선순위
 
-1. Tag 및 Category 기능 추가
-2. 검색기능 추가
-3. error handling
+1. error handling
    1. not found page
    2. error page
-4. 댓글기능 추가
-5. pagination, 무한 스크롤
-6. 서버 ssl 적용
-7. SEO
+2. SEO
    1. sitemap
    2. robots.txt
+3. pagination, 무한 스크롤
+4. 서버 ssl 적용
+5. 검색기능 추가
+6. 댓글기능 추가
+
+tag 추가 완료, category의 경우 기획 더 생각
 
 ### 참고자료
 

@@ -1,3 +1,5 @@
+import { Tag } from './tag';
+
 export interface PostPreviewType {
   id: number;
   title: string;
@@ -5,4 +7,5 @@ export interface PostPreviewType {
   content_summary: string;
   written_at: string;
   is_pinned: boolean;
+  tag_list: Tag[] | [];
 }

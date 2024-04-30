@@ -4,6 +4,7 @@ import Markdown from 'react-markdown';
 import mdComponents from '@/components/mdComponents';
 import { getPostId } from '@/api/getPostId';
 import { formatToTimeAgo } from '@/lib/utils/formatToTimeAgo';
+import TagChip from '@/app/blog/components/tagChip';
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const res = await getPostId(params.id);
@@ -19,13 +20,21 @@ export default async function PostPage({ params }: { params: { id: string } }) {
   const date = res.written_at;
   const title = res.title;
   const author = res.author;
+  const tagList = res.tag_list.sort((a, b) => b.order - a.order);
 
   return (
     <article id="content" className="mx-auto rounded-lg bg-back p-4 sm:p-6">
-      <div className="mb-12 flex flex-col">
+      <div className="mb-12 flex flex-col gap-4">
         <h1 className="text-4xl font-bold text-text">{title}</h1>
-        <div className="flex justify-end text-text">
-          {author} · {formatToTimeAgo(date)}
+        <div className="flex justify-between gap-2 text-text">
+          <div className="flex gap-2 overflow-scroll">
+            {tagList.map((tag) => (
+              <TagChip key={tag.name} {...tag} />
+            ))}
+          </div>
+          <div className="shrink-0">
+            {author} · {formatToTimeAgo(date)}
+          </div>
         </div>
       </div>
       <Markdown

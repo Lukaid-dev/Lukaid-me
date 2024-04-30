@@ -1,3 +1,5 @@
+import { Tag } from './tag';
+
 export interface PostType {
   id: number;
   title: string;
@@ -7,4 +9,5 @@ export interface PostType {
   written_at: string;
   is_public: boolean;
   is_pinned: boolean;
+  tag_list: Tag[] | [];
 }
