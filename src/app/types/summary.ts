@@ -1,11 +1,11 @@
-export interface summary {
+export interface Summary {
   key: string;
   isUrl?: boolean;
   value?: string;
-  urls?: url[];
+  urls?: Url[];
 }
 
-export interface url {
+export interface Url {
   title: string;
   link: string;
 }

@@ -1,10 +1,10 @@
 import Divider from '@/components/divider';
 import Naming from './naming';
 import SummaryCard from './summaryCard';
-import { summary } from '@/app/types/summary';
+import { Summary } from '@/app/types/summary';
 
 export default function Research() {
-  const summaries: summary[] = [
+  const summaries: Summary[] = [
     {
       key: '사용 기술',
       value:

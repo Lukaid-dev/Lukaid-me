@@ -2,10 +2,10 @@ import Divider from '@/components/divider';
 import Naming from './naming';
 import Period from './period';
 import SummaryCard from './summaryCard';
-import { summary } from '@/app/types/summary';
+import { Summary } from '@/app/types/summary';
 
 export default function ProjectBaekjoonRooms() {
-  const summaries: summary[] = [
+  const summaries: Summary[] = [
     { key: '포지션', value: '프론트엔드 개발자' },
     {
       key: '주요 사용 기술',

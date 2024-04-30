@@ -1,10 +1,10 @@
 'use client';
 
 import useThemeStore from '@/app/store/theme';
-import { summary } from '@/app/types/summary';
+import { Summary as SummaryType } from '@/app/types/summary';
 import Image from 'next/image';
 
-export default function Summary({ summary }: { summary: summary }) {
+export default function Summary({ summary }: { summary: SummaryType }) {
   const theme = useThemeStore((state) => state.theme);
   return (
     <div className="text-text">
