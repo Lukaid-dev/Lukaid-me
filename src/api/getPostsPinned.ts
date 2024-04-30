@@ -1,8 +1,7 @@
-import { PostPreviewType } from '@/app/types/postPreview';
 import { baseUrl, revalidate } from '@/lib/constants';
 
-export async function getPost(): Promise<PostPreviewType[]> {
-  const res = await fetch(`${baseUrl}/api/v1/posts/`, {
+export async function getPostsPinned() {
+  const res = await fetch(`${baseUrl}/api/v1/posts/pinned/`, {
     next: { revalidate },
   });
 

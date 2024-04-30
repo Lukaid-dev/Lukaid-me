@@ -1,11 +1,11 @@
-import { getPostPinned } from '@/api/getPostPinned';
+import { getPostsPinned } from '@/api/getPostsPinned';
 import { PostPinned } from '../types/postPinned';
 import Link from 'next/link';
 import Divider from '@/components/divider';
 import { formatToTimeAgo } from '@/lib/utils/formatToTimeAgo';
 
 export default async function PinnedPosts() {
-  const res = await getPostPinned();
+  const res = await getPostsPinned();
 
   return (
     <div className="flex w-full flex-col gap-2">

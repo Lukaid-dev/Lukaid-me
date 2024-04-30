@@ -1,8 +1,8 @@
-import { getPost } from '@/api/getPost';
+import { getPosts } from '@/api/getPosts';
 import PostCard from './components/postCard';
 
 export default async function PostListPage() {
-  const res = await getPost();
+  const res = await getPosts();
   return (
     <div className="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3">
       {res.map((post) => (
