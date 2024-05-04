@@ -1,5 +1,5 @@
-import HeroGraphic from './components/heroGraphic';
-import LandingProfile from './components/landingProfile';
+import HeroGraphic from '@/components/heroGraphic';
+import LandingProfile from '@/components/landingProfile';
 
 export default function Home() {
   return (

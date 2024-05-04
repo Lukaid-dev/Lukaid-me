@@ -1,7 +1,7 @@
 import Divider from '@/components/divider';
 import Naming from './naming';
 import SummaryCard from './summaryCard';
-import { Summary } from '@/app/types/summary';
+import { Summary } from '@/types/summary';
 
 export default function Research() {
   const summaries: Summary[] = [

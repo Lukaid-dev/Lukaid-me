@@ -1,7 +1,7 @@
 'use client';
 
 import Divider from '@/components/divider';
-import ToggleThemeButton from '@/components/toggleThemeButton';
+import ToggleThemeButton from '@/components/setting/toggleThemeButton';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';

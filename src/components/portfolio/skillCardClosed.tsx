@@ -1,6 +1,6 @@
 'use client';
 
-import useThemeStore from '@/app/store/theme';
+import useThemeStore from '@/stores/theme';
 import SkillBadge from './skillBadge';
 
 export default function SkillCardClosed({ isOpen }: { isOpen: boolean }) {

@@ -1,4 +1,4 @@
-import { Summary as SummaryType } from '@/app/types/summary';
+import { Summary as SummaryType } from '@/types/summary';
 import Summary from './summary';
 
 export default function SummaryCard({

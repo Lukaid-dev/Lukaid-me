@@ -6,7 +6,7 @@ import { Cog6ToothIcon as CogSolid } from '@heroicons/react/24/solid';
 
 import { usePathname } from 'next/navigation';
 import ProgressBar from './progressBar';
-import useThemeStore from '@/app/store/theme';
+import useThemeStore from '@/stores/theme';
 
 const navigationItem = [
   { name: '블로그', path: '/blog' },

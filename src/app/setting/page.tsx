@@ -1,6 +1,6 @@
 import Divider from '@/components/divider';
-import ThemePreview from '@/components/themePreview';
-import ToggleThemeButton from '@/components/toggleThemeButton';
+import ThemePreview from '@/components/setting/themePreview';
+import ToggleThemeButton from '@/components/setting/toggleThemeButton';
 
 export const metadata = {
   title: 'Settings',

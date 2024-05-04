@@ -1,4 +1,4 @@
-import { PostPreviewType } from '@/app/types/postPreview';
+import { PostPreviewType } from '@/types/postPreview';
 import { baseUrl, revalidate } from '@/lib/constants';
 
 export async function getPosts(): Promise<PostPreviewType[]> {

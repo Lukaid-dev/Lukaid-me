@@ -1,10 +1,10 @@
 import remarkGfm from 'remark-gfm';
 import matter from 'gray-matter';
 import Markdown from 'react-markdown';
-import mdComponents from '@/components/mdComponents';
+import mdComponents from '@/components/blog/mdComponents';
 import { getPostId } from '@/api/getPostId';
 import { formatToTimeAgo } from '@/lib/utils/formatToTimeAgo';
-import TagChip from '@/app/blog/components/tagChip';
+import TagChip from '@/components/blog/tagChip';
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const res = await getPostId(params.id);

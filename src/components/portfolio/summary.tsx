@@ -1,7 +1,7 @@
 'use client';
 
-import useThemeStore from '@/app/store/theme';
-import { Summary as SummaryType } from '@/app/types/summary';
+import useThemeStore from '@/stores/theme';
+import { Summary as SummaryType } from '@/types/summary';
 import Image from 'next/image';
 
 export default function Summary({ summary }: { summary: SummaryType }) {

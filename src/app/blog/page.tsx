@@ -1,5 +1,5 @@
 import { getPosts } from '@/api/getPosts';
-import PostCard from './components/postCard';
+import PostCard from '@/components/blog/postCard';
 
 export default async function PostListPage() {
   const res = await getPosts();

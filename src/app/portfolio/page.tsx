@@ -1,13 +1,13 @@
-import Profile from './components/profile';
-import Skills from './components/skills';
-import Career from './components/career';
-import ProjectLukaidMe from './components/ProjectLukaidMe';
-import ProjectMobileInvitation from './components/ProjectMobileInvitation';
-import ProjectBaekjoonRooms from './components/ProjectBaekjoonRooms';
-import ProjectFourHours from './components/ProjectFourHours';
-import Research from './components/research';
-import Education from './components/education';
-import PersonalStatement from './components/personalStatement';
+import Profile from '@/components/portfolio/profile';
+import Skills from '@/components/portfolio/skills';
+import Career from '@/components/portfolio/career';
+import ProjectLukaidMe from '@/components/portfolio/ProjectLukaidMe';
+import ProjectMobileInvitation from '@/components/portfolio/ProjectMobileInvitation';
+import ProjectBaekjoonRooms from '@/components/portfolio/ProjectBaekjoonRooms';
+import ProjectFourHours from '@/components/portfolio/ProjectFourHours';
+import Research from '@/components/portfolio/research';
+import Education from '@/components/portfolio/education';
+import PersonalStatement from '@/components/portfolio/personalStatement';
 
 export const metadata = {
   title: 'Portfolio',

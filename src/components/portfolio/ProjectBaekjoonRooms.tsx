@@ -2,7 +2,7 @@ import Divider from '@/components/divider';
 import Naming from './naming';
 import Period from './period';
 import SummaryCard from './summaryCard';
-import { Summary } from '@/app/types/summary';
+import { Summary } from '@/types/summary';
 
 export default function ProjectBaekjoonRooms() {
   const summaries: Summary[] = [

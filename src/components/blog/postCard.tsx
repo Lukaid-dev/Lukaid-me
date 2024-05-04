@@ -1,4 +1,4 @@
-import { PostPreviewType } from '@/app/types/postPreview';
+import { PostPreviewType } from '@/types/postPreview';
 import Thumbnail from './thumbnail';
 import { formatToTimeAgo } from '@/lib/utils/formatToTimeAgo';
 import Link from 'next/link';

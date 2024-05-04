@@ -1,4 +1,4 @@
-import { PostType } from '@/app/types/post';
+import { PostType } from '@/types/post';
 import { baseUrl, revalidate } from '@/lib/constants';
 
 export async function getPostId(id: string): Promise<PostType> {

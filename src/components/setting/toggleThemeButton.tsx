@@ -1,7 +1,7 @@
 'use client';
 
-import useThemeStore from '@/app/store/theme';
-import { Theme } from '@/app/types/theme';
+import useThemeStore from '@/stores/theme';
+import { Theme } from '@/types/theme';
 import { useEffect } from 'react';
 
 export default function ToggleThemeButton() {

@@ -1,4 +1,4 @@
-import { Tag } from '@/app/types/tag';
+import { Tag } from '@/types/tag';
 
 export default function TagChip(tag: Tag) {
   return (
