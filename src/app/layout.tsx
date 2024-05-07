@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header';
 import { setInitTheme } from '@/lib/utils/setInitTheme';
+import Footer from '@/components/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -46,16 +47,19 @@ export default function RootLayout({
     <html lang="ko">
       <body
         suppressHydrationWarning={true}
-        className={`${inter.className} mx-auto bg-back_layout shadow-xl md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2`}>
+        className={`${inter.className} mx-auto justify-between bg-back_layout md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2`}>
         <script
           dangerouslySetInnerHTML={{
             __html: initTheme,
           }}></script>
-        <Header />
-        {children}
-        {modal}
-        <Analytics />
-        <SpeedInsights />
+        <div className="mx-auto rounded-b-2xl shadow-xl">
+          <Header />
+          {children}
+          {modal}
+          <Analytics />
+          <SpeedInsights />
+        </div>
+        <Footer />
       </body>
     </html>
   );
