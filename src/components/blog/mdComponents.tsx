@@ -73,7 +73,6 @@ const markdownComponents: Components = {
           {...props}
         />
       );
-    // return <code className="bg-code-bg text-white" {...props} />;
     return (
       <div className="bg-back_layout p-2">
         <SyntaxHighlighter
