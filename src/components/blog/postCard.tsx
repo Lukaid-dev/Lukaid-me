@@ -9,7 +9,7 @@ export default function PostCard(preview: PostPreviewType) {
   return (
     <Link
       href={`/blog/${preview.id}`}
-      className="flex flex-col items-center justify-between gap-2 rounded-xl bg-back px-4 pb-4 pt-2 text-text shadow transition hover:scale-105">
+      className="flex flex-col items-center justify-between gap-2 rounded-xl bg-back px-4 pb-4 pt-2 text-text shadow transition hover:scale-105 hover:shadow-xl">
       <div className="flex flex-col items-center justify-start gap-2">
         <div className="mr-auto text-xl font-semibold">{preview.title}</div>
         <Thumbnail thumbnail={preview.thumbnail} />
