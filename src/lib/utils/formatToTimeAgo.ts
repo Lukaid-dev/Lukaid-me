@@ -10,9 +10,9 @@ export function formatToTimeAgo(date: string): string {
   const weekInMs = dayInMs * 7;
 
   const formatter = new Intl.RelativeTimeFormat('ko');
+  // TODO: 배포서버에서, formatter에 오류가 발생하는 것 같은데, 추후 원인 파악 및 해결 필요
 
   if (diffInMs >= weekInMs) {
-    // If the date is more than a week ago, return the date in the format of 'YYYY-MM-DD'
     const year = new Date(time).getFullYear();
     const month = new Date(time).getMonth() + 1;
     const day = new Date(time).getDate();
@@ -27,7 +27,6 @@ export function formatToTimeAgo(date: string): string {
     const diff = Math.round(diffInMs / minInMs);
     return formatter.format(-diff, 'minutes');
   } else {
-    const diff = Math.round(diffInMs / secInMs);
-    return formatter.format(-diff, 'seconds');
+    return '방금 전';
   }
 }

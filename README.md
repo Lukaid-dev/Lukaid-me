@@ -18,10 +18,6 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
 
 ### 개발
 
-앞으로 개발 사항 우선순위
-
--> 경과시간 로직 손보기, 아무래도 js에서는 UTC 기준인듯?
-
 1. pagination, 무한 스크롤
 2. 서버 ssl 적용
 3. 검색기능 추가
