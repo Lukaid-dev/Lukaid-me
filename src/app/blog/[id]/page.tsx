@@ -5,9 +5,15 @@ import mdComponents from '@/components/blog/mdComponents';
 import { getPostId } from '@/api/getPostId';
 import { formatToTimeAgo } from '@/lib/utils/formatToTimeAgo';
 import TagChip from '@/components/blog/tagChip';
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const res = await getPostId(params.id);
+  if (!res) {
+    return {
+      title: 'Not Found',
+    };
+  }
   return {
     title: res.title,
   };
@@ -15,6 +21,9 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 
 export default async function PostPage({ params }: { params: { id: string } }) {
   const res = await getPostId(params.id);
+  if (!res) {
+    notFound();
+  }
   const markdown = res.content;
   const { content } = matter(markdown);
   const date = res.written_at;

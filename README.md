@@ -20,16 +20,15 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
 
 앞으로 개발 사항 우선순위
 
-1. error handling
-   1. not found page
-   2. error page
-2. SEO
+-> 경과시간 로직 손보기, 아무래도 js에서는 UTC 기준인듯?
+
+1. SEO
    1. sitemap
    2. robots.txt
-3. pagination, 무한 스크롤
-4. 서버 ssl 적용
-5. 검색기능 추가
-6. 댓글기능 추가
+2. pagination, 무한 스크롤
+3. 서버 ssl 적용
+4. 검색기능 추가
+5. 댓글기능 추가
 
 tag 추가 완료, category의 경우 기획 더 생각
 

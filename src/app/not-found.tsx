@@ -1,20 +1,17 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { Metadata } from 'next';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
-export default function Error({
-  error,
-}: {
-  error: Error & { digest?: string };
-}) {
+export const metadata: Metadata = {
+  title: 'Page Not Found',
+};
+
+export default function NotFound() {
   const [time, setTime] = useState(5);
   const router = useRouter();
-
-  useEffect(() => {
-    console.error(error);
-  }, [error]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,7 +27,7 @@ export default function Error({
 
   return (
     <div className="my-auto flex h-96 flex-col items-center justify-center">
-      <h1>Something went wrong!</h1>
+      <h1>404 - Page Not Found</h1>
       <p>
         Redirecting to the
         <Link href="/">home page</Link>
