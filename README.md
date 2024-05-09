@@ -22,13 +22,10 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
 
 -> 경과시간 로직 손보기, 아무래도 js에서는 UTC 기준인듯?
 
-1. SEO
-   1. sitemap
-   2. robots.txt
-2. pagination, 무한 스크롤
-3. 서버 ssl 적용
-4. 검색기능 추가
-5. 댓글기능 추가
+1. pagination, 무한 스크롤
+2. 서버 ssl 적용
+3. 검색기능 추가
+4. 댓글기능 추가
 
 tag 추가 완료, category의 경우 기획 더 생각
 
