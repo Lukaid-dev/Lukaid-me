@@ -18,10 +18,9 @@ npm install -D @tailwindcss/typography prettier-plugin-tailwindcss
 
 ### 개발
 
-1. pagination, 무한 스크롤
-2. 서버 ssl 적용
-3. 검색기능 추가
-4. 댓글기능 추가
+1. 검색기능 추가
+2. 댓글기능 추가
+3. 서버 ssl 적용
 
 tag 추가 완료, category의 경우 기획 더 생각
 

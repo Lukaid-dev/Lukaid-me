@@ -9,3 +9,10 @@ export interface PostPreviewType {
   is_pinned: boolean;
   tag_list: Tag[] | [];
 }
+
+export interface PostPreviewPagination {
+  start: number;
+  offset: number;
+  next: number | null;
+  posts: PostPreviewType[];
+}
