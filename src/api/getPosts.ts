@@ -6,7 +6,7 @@ export async function getPosts({
 }: {
   start: number;
 }): Promise<PostPreviewPagination> {
-  const res = await fetch(`${baseUrl}/api/v1/posts/?start=${start}&offset=2`, {
+  const res = await fetch(`${baseUrl}/api/v1/posts/?start=${start}&offset=6`, {
     next: { revalidate },
   });
 
