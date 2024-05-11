@@ -2,7 +2,7 @@ import { getPostsPinned } from '@/api/getPostsPinned';
 import { PostPinned } from '../types/postPinned';
 import Link from 'next/link';
 import Divider from '@/components/divider';
-import { formatToTimeAgo } from '@/lib/utils/formatToTimeAgo';
+import FormatToTimeAgo from './formatToTimeAgo';
 
 export default async function PinnedPosts() {
   const res = await getPostsPinned();
@@ -18,7 +18,9 @@ export default async function PinnedPosts() {
             href={`/blog/${post.id}`}
             key={post.id}>
             <div>{post.title}</div>
-            <div className="shrink-0">{formatToTimeAgo(post.written_at)}</div>
+            <div className="shrink-0">
+              <FormatToTimeAgo date={post.written_at} />
+            </div>
           </Link>
         ))}
       </div>

@@ -1,8 +1,8 @@
 import { PostPreviewType } from '@/types/postPreview';
 import Thumbnail from './thumbnail';
-import { formatToTimeAgo } from '@/lib/utils/formatToTimeAgo';
 import Link from 'next/link';
 import TagChip from './tagChip';
+import FormatToTimeAgo from '../formatToTimeAgo';
 
 export default function PostCard(preview: PostPreviewType) {
   const tagList = preview.tag_list.sort((a, b) => b.order - a.order);
@@ -23,7 +23,9 @@ export default function PostCard(preview: PostPreviewType) {
             <TagChip key={tag.name} {...tag} />
           ))}
         </div>
-        <div className="shrink-0">{formatToTimeAgo(preview.written_at)}</div>
+        <div className="shrink-0">
+          <FormatToTimeAgo date={preview.written_at} />
+        </div>
       </div>
     </Link>
   );
