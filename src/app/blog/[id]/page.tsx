@@ -6,17 +6,23 @@ import { getPostId } from '@/api/getPostId';
 import TagChip from '@/components/blog/tagChip';
 import { notFound } from 'next/navigation';
 import FormatToTimeAgo from '@/components/formatToTimeAgo';
+import { Metadata, ResolvingMetadata } from 'next/types';
+import genMeta from '@/lib/utils/genMeta';
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata(
+  { params }: { params: { id: string } },
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
   const res = await getPostId(params.id);
-  if (!res) {
+  const previousImages = (await parent).openGraph?.images || [];
+  if (res) {
+    const meta = genMeta(res, previousImages);
+    return meta;
+  } else {
     return {
       title: 'Not Found',
     };
   }
-  return {
-    title: res.title,
-  };
 }
 
 export default async function PostPage({ params }: { params: { id: string } }) {
