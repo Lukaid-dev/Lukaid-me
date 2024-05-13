@@ -8,8 +8,7 @@ type ThemeState = {
   toggleTheme: () => void;
 };
 
-const changeAttAndStorage = (theme: Theme) => {
-  window.localStorage.setItem('data-theme', theme);
+const changeAttribute = (theme: Theme) => {
   document.body.setAttribute('data-theme', theme);
 };
 
@@ -24,19 +23,19 @@ const useThemeStore = create(
         set((state) => {
           switch (state.theme) {
             case 'one-dark':
-              changeAttAndStorage('one-light');
+              changeAttribute('one-light');
               return { theme: 'one-light' };
             case 'one-light':
-              changeAttAndStorage('github-dark');
+              changeAttribute('github-dark');
               return { theme: 'github-dark' };
             case 'github-dark':
-              changeAttAndStorage('github-light');
+              changeAttribute('github-light');
               return { theme: 'github-light' };
             case 'github-light':
-              changeAttAndStorage('one-dark');
+              changeAttribute('one-dark');
               return { theme: 'one-dark' };
             default:
-              changeAttAndStorage('one-dark');
+              changeAttribute('one-dark');
               return { theme: 'one-dark' };
           }
         });
