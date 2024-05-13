@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { Theme } from '../types/theme';
+import { dataTheme } from '@/lib/constants';
 
 type ThemeState = {
   theme: Theme;
@@ -9,35 +10,35 @@ type ThemeState = {
 };
 
 const changeAttAndStorage = (theme: Theme) => {
-  window.localStorage.setItem('data-theme', theme);
-  document.body.setAttribute('data-theme', theme);
+  window.localStorage.setItem(dataTheme, theme);
+  document.body.setAttribute(dataTheme, theme);
 };
 
 const useThemeStore = create(
   persist<ThemeState>(
     (set) => ({
-      theme: 'one-light',
+      theme: Theme.oneLight,
       setTheme: (theme: Theme) => {
         set({ theme });
       },
       toggleTheme: () => {
         set((state) => {
           switch (state.theme) {
-            case 'one-dark':
-              changeAttAndStorage('one-light');
-              return { theme: 'one-light' };
-            case 'one-light':
-              changeAttAndStorage('github-dark');
-              return { theme: 'github-dark' };
-            case 'github-dark':
-              changeAttAndStorage('github-light');
-              return { theme: 'github-light' };
-            case 'github-light':
-              changeAttAndStorage('one-dark');
-              return { theme: 'one-dark' };
+            case Theme.oneDark:
+              changeAttAndStorage(Theme.oneLight);
+              return { theme: Theme.oneLight };
+            case Theme.oneLight:
+              changeAttAndStorage(Theme.githubDark);
+              return { theme: Theme.githubDark };
+            case Theme.githubDark:
+              changeAttAndStorage(Theme.githubLight);
+              return { theme: Theme.githubLight };
+            case Theme.githubLight:
+              changeAttAndStorage(Theme.oneDark);
+              return { theme: Theme.oneDark };
             default:
-              changeAttAndStorage('one-dark');
-              return { theme: 'one-dark' };
+              changeAttAndStorage(Theme.oneDark);
+              return { theme: Theme.oneDark };
           }
         });
       },

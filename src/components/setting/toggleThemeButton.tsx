@@ -1,5 +1,6 @@
 'use client';
 
+import { dataTheme } from '@/lib/constants';
 import useThemeStore from '@/stores/theme';
 import { Theme } from '@/types/theme';
 import { useEffect } from 'react';
@@ -10,7 +11,7 @@ export default function ToggleThemeButton() {
   const toggleTheme = useThemeStore((state) => state.toggleTheme);
 
   useEffect(() => {
-    const theme = document.body.getAttribute('data-theme');
+    const theme = document.body.getAttribute(dataTheme);
     setTheme(theme as Theme);
   }, [setTheme]);
 
