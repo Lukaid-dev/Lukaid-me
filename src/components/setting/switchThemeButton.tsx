@@ -10,8 +10,9 @@ export default function SwitchThemeButton() {
   const switchTheme = useThemeStore((state) => state.switchTheme);
 
   useEffect(() => {
-    const theme = document.body.getAttribute('data-theme');
-    setTheme(theme as Theme);
+    const themeStorage = window.localStorage.getItem('theme-storage')!;
+    const currentTheme = JSON.parse(themeStorage).state.theme;
+    setTheme(currentTheme as Theme);
   }, [setTheme]);
 
   return (
