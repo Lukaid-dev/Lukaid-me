@@ -32,10 +32,12 @@ export default async function PostPage({ params }: { params: { id: string } }) {
   }
   const markdown = res.content;
   const { content } = matter(markdown);
-  const date = res.written_at;
   const title = res.title;
   const author = res.author;
   const tagList = res.tag_list.sort((a, b) => b.order - a.order);
+  const year = new Date(res.written_at).getFullYear();
+  const month = new Date(res.written_at).getMonth() + 1;
+  const day = new Date(res.written_at).getDate();
 
   return (
     <article id="content" className="mx-auto rounded-lg bg-back p-4 sm:p-6">
@@ -48,7 +50,10 @@ export default async function PostPage({ params }: { params: { id: string } }) {
             ))}
           </div>
           <div className="shrink-0">
-            {author} · <FormatToTimeAgo date={date} />
+            {author} ·{' '}
+            <span>
+              {`${year % 100}-${month < 10 ? `0${month}` : month}-${day < 10 ? `0${day}` : day}`}
+            </span>
           </div>
         </div>
       </div>

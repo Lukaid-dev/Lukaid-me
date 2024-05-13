@@ -1,22 +1,30 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
+const secInMs = 1000;
+const minInMs = secInMs * 60;
+const hourInMs = minInMs * 60;
+const dayInMs = hourInMs * 24;
+const weekInMs = dayInMs * 7;
+const formatter = new Intl.RelativeTimeFormat('ko');
+
 export default function FormatToTimeAgo({ date }: { date: string }) {
-  const time = new Date(date).getTime();
-  const now = new Date().getTime();
-  const diffInMs = now - time;
+  const writtenTime = new Date(date).getTime();
+  const [diffInMs, setDiffInMs] = useState<number>(0);
 
-  const secInMs = 1000;
-  const minInMs = secInMs * 60;
-  const hourInMs = minInMs * 60;
-  const dayInMs = hourInMs * 24;
-  const weekInMs = dayInMs * 7;
+  useEffect(() => {
+    const now = new Date().getTime();
+    const diff = now - writtenTime;
+    setDiffInMs(diff);
+  }, [date, writtenTime]);
 
-  const formatter = new Intl.RelativeTimeFormat('ko');
+  if (diffInMs === 0) return <span></span>;
 
   if (diffInMs >= weekInMs) {
-    const year = new Date(time).getFullYear();
-    const month = new Date(time).getMonth() + 1;
-    const day = new Date(time).getDate();
+    const year = new Date(writtenTime).getFullYear();
+    const month = new Date(writtenTime).getMonth() + 1;
+    const day = new Date(writtenTime).getDate();
     return (
       <span>
         {`${year % 100}-${month < 10 ? `0${month}` : month}-${day < 10 ? `0${day}` : day}`}
