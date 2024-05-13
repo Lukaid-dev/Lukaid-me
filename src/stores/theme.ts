@@ -5,7 +5,7 @@ import { Theme } from '../types/theme';
 type ThemeState = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
-  toggleTheme: () => void;
+  switchTheme: () => void;
 };
 
 const changeAttribute = (theme: Theme) => {
@@ -19,7 +19,7 @@ const useThemeStore = create(
       setTheme: (theme: Theme) => {
         set({ theme });
       },
-      toggleTheme: () => {
+      switchTheme: () => {
         set((state) => {
           switch (state.theme) {
             case 'one-dark':
