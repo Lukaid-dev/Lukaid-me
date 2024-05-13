@@ -6,7 +6,7 @@ import { dataTheme } from '@/lib/constants';
 type ThemeState = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
-  toggleTheme: () => void;
+  switchTheme: () => void;
 };
 
 const changeAttAndStorage = (theme: Theme) => {
@@ -21,7 +21,7 @@ const useThemeStore = create(
       setTheme: (theme: Theme) => {
         set({ theme });
       },
-      toggleTheme: () => {
+      switchTheme: () => {
         set((state) => {
           switch (state.theme) {
             case Theme.oneDark:

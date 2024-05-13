@@ -1,7 +1,7 @@
 'use client';
 
 import Divider from '@/components/divider';
-import ToggleThemeButton from '@/components/setting/toggleThemeButton';
+import SwitchThemeButton from '@/components/setting/switchThemeButton';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
@@ -29,7 +29,7 @@ export default function ModalSettingPage() {
           </button>
         </div>
         <Divider />
-        <ToggleThemeButton />
+        <SwitchThemeButton />
       </div>
     </div>
   );

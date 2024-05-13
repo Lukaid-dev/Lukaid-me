@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function ThemePreview() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleThemePreview = () => {
+  const switchThemePreview = () => {
     setIsOpen((prev) => !prev);
   };
 
@@ -14,7 +14,7 @@ export default function ThemePreview() {
       <div className="flex items-center justify-between">
         <div>Theme Preview</div>
         <button
-          onClick={toggleThemePreview}
+          onClick={switchThemePreview}
           className="rounded-xl bg-accent px-4 py-2 font-medium text-white outline-none transition-transform hover:cursor-pointer active:scale-90">
           {isOpen ? 'Close' : 'Open'}
         </button>
