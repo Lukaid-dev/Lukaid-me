@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { Theme } from '../types/theme';
-import { dataTheme } from '@/lib/constants';
+import { dataTheme, themeStorage } from '@/lib/constants';
 
 type ThemeState = {
   theme: Theme;
@@ -9,8 +9,7 @@ type ThemeState = {
   switchTheme: () => void;
 };
 
-const changeAttAndStorage = (theme: Theme) => {
-  window.localStorage.setItem(dataTheme, theme);
+const changeAttribute = (theme: Theme) => {
   document.body.setAttribute(dataTheme, theme);
 };
 
@@ -25,26 +24,26 @@ const useThemeStore = create(
         set((state) => {
           switch (state.theme) {
             case Theme.oneDark:
-              changeAttAndStorage(Theme.oneLight);
+              changeAttribute(Theme.oneLight);
               return { theme: Theme.oneLight };
             case Theme.oneLight:
-              changeAttAndStorage(Theme.githubDark);
+              changeAttribute(Theme.githubDark);
               return { theme: Theme.githubDark };
             case Theme.githubDark:
-              changeAttAndStorage(Theme.githubLight);
+              changeAttribute(Theme.githubLight);
               return { theme: Theme.githubLight };
             case Theme.githubLight:
-              changeAttAndStorage(Theme.oneDark);
+              changeAttribute(Theme.oneDark);
               return { theme: Theme.oneDark };
             default:
-              changeAttAndStorage(Theme.oneDark);
+              changeAttribute(Theme.oneDark);
               return { theme: Theme.oneDark };
           }
         });
       },
     }),
     {
-      name: 'theme-storage',
+      name: themeStorage,
     },
   ),
 );

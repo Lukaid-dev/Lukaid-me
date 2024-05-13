@@ -1,11 +1,11 @@
 // 초기 테마를 설정하는 함수
 export function setInitTheme() {
   function getInitTheme() {
-    const currentTheme = window.localStorage.getItem('data-theme');
-    const hasTheme = typeof currentTheme === 'string';
+    const storage = window.localStorage.getItem('theme-storage');
 
-    if (hasTheme) {
-      return currentTheme;
+    if (storage) {
+      const theme = JSON.parse(storage).state.theme;
+      return theme;
     }
 
     const preference = window.matchMedia('(prefers-color-scheme: dark)');

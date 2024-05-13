@@ -1,9 +1,15 @@
 'use client';
 
-import { dataTheme } from '@/lib/constants';
+import { themeStorage } from '@/lib/constants';
 import useThemeStore from '@/stores/theme';
 import { Theme } from '@/types/theme';
 import { useEffect } from 'react';
+
+interface IThemeStorage {
+  state: {
+    theme: Theme;
+  };
+}
 
 export default function SwitchThemeButton() {
   const theme = useThemeStore((state) => state.theme);
@@ -11,7 +17,10 @@ export default function SwitchThemeButton() {
   const switchTheme = useThemeStore((state) => state.switchTheme);
 
   useEffect(() => {
-    const theme = document.body.getAttribute(dataTheme);
+    const storage: IThemeStorage = JSON.parse(
+      localStorage.getItem(themeStorage)!,
+    );
+    const theme = storage!.state.theme;
     setTheme(theme as Theme);
   }, [setTheme]);
 
