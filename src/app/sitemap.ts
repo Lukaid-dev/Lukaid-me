@@ -9,9 +9,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: post.written_at.split('T')[0],
   }));
 
-  const routes = ['', '/blog', '/portfolio'].map((route) => ({
+  const routes = ['', '/blog'].map((route) => ({
     url: `https://www.lukaid.me${route}`,
   }));
+
+  // const routes = ['', '/blog', '/portfolio'].map((route) => ({
+  //   url: `https://www.lukaid.me${route}`,
+  // }));
 
   return [...routes, ...posts];
 }

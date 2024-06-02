@@ -9,7 +9,7 @@ export default function HeroGraphic() {
           <div className="bg-gold" />
           <div className="bg-green" />
         </div>
-        <div className="flex items-center gap-1 text-2xl font-semibold text-text">
+        <div className="flex h-full w-full items-center gap-1 px-10 text-2xl font-semibold text-text">
           <div>Lukaid.me(</div>
           <DynamicSkills />
           <div>)</div>
