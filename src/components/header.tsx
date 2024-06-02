@@ -10,7 +10,7 @@ import useThemeStore from '@/stores/theme';
 
 const navigationItem = [
   { name: '블로그', path: '/blog' },
-  { name: '포트폴리오', path: '/portfolio' },
+  // { name: '포트폴리오', path: '/portfolio' },
 ];
 
 const Header = () => {
